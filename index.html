@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompTIA PenTest+ PT0-003 Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 2px solid #e94560;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #e94560;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #a0a0a0;
+        }
+
+        /* Tab styles */
+        .tabs {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 0;
+        }
+
+        .tab {
+            padding: 15px 25px;
+            border: none;
+            background: rgba(255,255,255,0.05);
+            color: #a0a0a0;
+            cursor: pointer;
+            border-radius: 10px 10px 0 0;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        .tab.active {
+            background: rgba(233, 69, 96, 0.2);
+            color: #e94560;
+            border-bottom: 3px solid #e94560;
+        }
+
+        .tab-badge {
+            background: #e94560;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            margin-left: 8px;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #e94560;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #a0a0a0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+
+        .question-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .question-number {
+            font-size: 0.9em;
+            color: #e94560;
+            margin-bottom: 15px;
+        }
+
+        .question-category {
+            display: inline-block;
+            background: rgba(233, 69, 96, 0.2);
+            color: #e94560;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-bottom: 15px;
+        }
+
+        .question-text {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .multi-select-notice {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid #ffc107;
+            color: #ffc107;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .option:hover {
+            background: rgba(233, 69, 96, 0.2);
+            border-color: #e94560;
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            background: rgba(233, 69, 96, 0.3);
+            border-color: #e94560;
+        }
+
+        .option.correct {
+            background: rgba(46, 213, 115, 0.3);
+            border-color: #2ed573;
+        }
+
+        .option.incorrect {
+            background: rgba(255, 71, 87, 0.3);
+            border-color: #ff4757;
+        }
+
+        .option.show-correct {
+            background: rgba(46, 213, 115, 0.3);
+            border-color: #2ed573;
+        }
+
+        .option-letter {
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .option-text {
+            flex: 1;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .result-message {
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .result-message.correct {
+            background: rgba(46, 213, 115, 0.2);
+            border: 1px solid #2ed573;
+            color: #2ed573;
+            display: block;
+        }
+
+        .result-message.incorrect {
+            background: rgba(255, 71, 87, 0.2);
+            border: 1px solid #ff4757;
+            color: #ff4757;
+            display: block;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .jump-to {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .jump-to input {
+            width: 80px;
+            padding: 10px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .jump-to input:focus {
+            outline: none;
+            border-color: #e94560;
+        }
+
+        .mode-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .mode-btn {
+            padding: 10px 20px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mode-btn.active {
+            background: #e94560;
+            border-color: #e94560;
+        }
+
+        .final-results {
+            text-align: center;
+            padding: 50px 30px;
+        }
+
+        .final-results h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .score-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(#2ed573 var(--percentage), rgba(255,255,255,0.1) 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .score-circle::before {
+            content: '';
+            width: 160px;
+            height: 160px;
+            background: #1a1a2e;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .score-text {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            gap: 8px;
+            margin-top: 30px;
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+
+        .q-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.8em;
+            transition: all 0.2s ease;
+        }
+
+        .q-btn.unanswered {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .q-btn.answered-correct {
+            background: #2ed573;
+            color: white;
+        }
+
+        .q-btn.answered-incorrect {
+            background: #ff4757;
+            color: white;
+        }
+
+        .q-btn.current {
+            box-shadow: 0 0 0 3px #e94560;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+            }
+
+            .tab {
+                flex: 1;
+                text-align: center;
+                padding: 12px 15px;
+            }
+
+            .stats-bar {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .stat-item {
+                flex: 1 1 45%;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CompTIA PenTest+ PT0-003</h1>
+            <p>Practice Exam Questions</p>
+        </header>
+
+        <!-- Tabs for different question sets -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('premium')">
+                Premium<span class="tab-badge" id="premium-count">294</span>
+            </button>
+            <button class="tab" onclick="switchTab('marks4sure')">
+                Marks4Sure<span class="tab-badge" id="marks4sure-count">240</span>
+            </button>
+        </div>
+
+        <div class="mode-toggle">
+            <button class="mode-btn active" onclick="setMode('practice')">Practice Mode</button>
+            <button class="mode-btn" onclick="setMode('exam')">Exam Mode</button>
+            <button class="mode-btn" onclick="shuffleQuestions()">Shuffle</button>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value" id="current-q">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="total-q">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="correct-count">0</div>
+                <div class="stat-label">Correct</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="incorrect-count">0</div>
+                <div class="stat-label">Incorrect</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="score-percent">0%</div>
+                <div class="stat-label">Score</div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div id="quiz-container">
+            <div class="question-card" id="question-card">
+                <div class="question-number" id="question-number"></div>
+                <div class="question-category" id="question-category" style="display: none;"></div>
+                <div class="question-text" id="question-text"></div>
+                <div class="multi-select-notice" id="multi-select-notice" style="display: none;">
+                    This question requires multiple answers. Select all that apply.
+                </div>
+                <div class="options" id="options"></div>
+                <div class="result-message" id="result-message"></div>
+                <div class="buttons">
+                    <button class="btn btn-primary" id="check-btn" onclick="checkAnswer()">Check Answer</button>
+                    <button class="btn btn-secondary" id="next-btn" onclick="nextQuestion()">Next</button>
+                    <button class="btn btn-secondary" id="prev-btn" onclick="prevQuestion()">Previous</button>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <div class="jump-to">
+                    <span>Go to question:</span>
+                    <input type="number" id="jump-input" min="1" onkeypress="handleJump(event)">
+                    <button class="btn btn-secondary" onclick="jumpToQuestion()">Go</button>
+                </div>
+            </div>
+
+            <div class="question-grid" id="question-grid"></div>
+        </div>
+
+        <div id="final-results" style="display: none;">
+            <div class="final-results">
+                <h2>Quiz Completed!</h2>
+                <div class="score-circle" id="score-circle">
+                    <span class="score-text" id="final-score">0%</span>
+                </div>
+                <p id="final-stats"></p>
+                <div class="buttons" style="justify-content: center; margin-top: 30px;">
+                    <button class="btn btn-primary" onclick="restartQuiz()">Restart Quiz</button>
+                    <button class="btn btn-secondary" onclick="reviewMistakes()">Review Mistakes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Question sets for different tabs
+        const questionSets = {
+            premium: { file: 'questions.json', questions: [], answered: {} },
+            marks4sure: { file: 'questions2.json', questions: [], answered: {} }
+        };
+
+        let currentTab = 'premium';
+        let questions = [];
+        let currentIndex = 0;
+        let selectedOptions = []; // Array for multi-select support
+        let answered = {};
+        let mode = 'practice';
+
+        async function loadQuestions() {
+            try {
+                // Load both question sets
+                const [premiumRes, marks4sureRes] = await Promise.all([
+                    fetch('questions.json'),
+                    fetch('questions2.json')
+                ]);
+
+                questionSets.premium.questions = await premiumRes.json();
+                questionSets.marks4sure.questions = await marks4sureRes.json();
+
+                // Update tab badges
+                document.getElementById('premium-count').textContent = questionSets.premium.questions.length;
+                document.getElementById('marks4sure-count').textContent = questionSets.marks4sure.questions.length;
+
+                // Initialize with premium tab
+                switchTab('premium');
+            } catch (error) {
+                console.error('Error loading questions:', error);
+                document.getElementById('question-text').textContent = 'Error loading questions. Please check console for details.';
+            }
+        }
+
+        function switchTab(tabName) {
+            currentTab = tabName;
+
+            // Update tab UI
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event?.target?.classList.add('active') || document.querySelector(`.tab:first-child`).classList.add('active');
+
+            // Highlight correct tab
+            document.querySelectorAll('.tab').forEach(tab => {
+                if (tab.textContent.toLowerCase().includes(tabName === 'premium' ? 'premium' : 'marks4sure')) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            // Switch question set
+            questions = questionSets[tabName].questions;
+            answered = questionSets[tabName].answered;
+            currentIndex = 0;
+            selectedOptions = [];
+
+            // Update UI
+            document.getElementById('total-q').textContent = questions.length;
+            document.getElementById('jump-input').max = questions.length;
+
+            updateStats();
+            renderQuestion();
+            renderQuestionGrid();
+
+            // Show quiz container, hide results
+            document.getElementById('quiz-container').style.display = 'block';
+            document.getElementById('final-results').style.display = 'none';
+        }
+
+        function setMode(newMode) {
+            mode = newMode;
+            document.querySelectorAll('.mode-btn').forEach((btn, index) => {
+                btn.classList.remove('active');
+                if ((newMode === 'practice' && index === 0) || (newMode === 'exam' && index === 1)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            if (mode === 'exam') {
+                document.getElementById('check-btn').style.display = 'none';
+            } else {
+                document.getElementById('check-btn').style.display = 'block';
+            }
+            renderQuestion();
+        }
+
+        function shuffleQuestions() {
+            for (let i = questions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [questions[i], questions[j]] = [questions[j], questions[i]];
+            }
+            currentIndex = 0;
+            questionSets[currentTab].answered = {};
+            answered = questionSets[currentTab].answered;
+            updateStats();
+            renderQuestion();
+            renderQuestionGrid();
+            alert('Questions have been shuffled!');
+        }
+
+        function isMultiSelect(q) {
+            // Check if question has multiple correct answers
+            return Array.isArray(q.correct) && q.correct.length > 1;
+        }
+
+        function renderQuestion() {
+            if (currentIndex >= questions.length) {
+                showFinalResults();
+                return;
+            }
+
+            const q = questions[currentIndex];
+            const multiSelect = isMultiSelect(q);
+
+            document.getElementById('current-q').textContent = currentIndex + 1;
+            document.getElementById('question-number').textContent = `Question ${currentIndex + 1} of ${questions.length} (Original #${q.id})`;
+            document.getElementById('question-text').textContent = q.question;
+
+            // Show category if available
+            const categoryEl = document.getElementById('question-category');
+            if (q.category) {
+                categoryEl.textContent = q.category;
+                categoryEl.style.display = 'inline-block';
+            } else {
+                categoryEl.style.display = 'none';
+            }
+
+            // Show multi-select notice
+            document.getElementById('multi-select-notice').style.display = multiSelect ? 'block' : 'none';
+
+            const optionsDiv = document.getElementById('options');
+            optionsDiv.innerHTML = '';
+
+            // Get all option letters
+            const optionLetters = Object.keys(q.options).sort();
+
+            optionLetters.forEach(letter => {
+                if (q.options[letter]) {
+                    const option = document.createElement('div');
+                    option.className = 'option';
+                    option.setAttribute('data-letter', letter);
+                    option.innerHTML = `
+                        <span class="option-letter">${letter}</span>
+                        <span class="option-text">${q.options[letter]}</span>
+                    `;
+                    option.onclick = () => selectOption(letter, multiSelect);
+
+                    // Restore previous answer state
+                    if (answered[currentIndex]) {
+                        const ans = answered[currentIndex];
+                        const isSelected = Array.isArray(ans.selected)
+                            ? ans.selected.includes(letter)
+                            : ans.selected === letter;
+
+                        if (isSelected) {
+                            option.classList.add('selected');
+                            if (ans.checked) {
+                                const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
+                                const isCorrectOption = correctAnswers.includes(letter);
+                                option.classList.add(isCorrectOption ? 'correct' : 'incorrect');
+                            }
+                        }
+                        if (ans.checked) {
+                            const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
+                            if (correctAnswers.includes(letter) && !ans.isCorrect) {
+                                option.classList.add('show-correct');
+                            }
+                        }
+                    }
+
+                    optionsDiv.appendChild(option);
+                }
+            });
+
+            // Restore selected options
+            if (answered[currentIndex]) {
+                selectedOptions = Array.isArray(answered[currentIndex].selected)
+                    ? [...answered[currentIndex].selected]
+                    : [answered[currentIndex].selected];
+            } else {
+                selectedOptions = [];
+            }
+
+            const resultMsg = document.getElementById('result-message');
+            if (answered[currentIndex]?.checked) {
+                const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
+                resultMsg.className = 'result-message ' + (answered[currentIndex].isCorrect ? 'correct' : 'incorrect');
+                resultMsg.textContent = answered[currentIndex].isCorrect ?
+                    'Correct!' :
+                    `Incorrect. The correct answer${correctAnswers.length > 1 ? 's are' : ' is'}: ${correctAnswers.join(', ')}`;
+            } else {
+                resultMsg.className = 'result-message';
+            }
+
+            document.getElementById('check-btn').disabled = answered[currentIndex]?.checked || false;
+
+            updateProgress();
+            highlightCurrentInGrid();
+        }
+
+        function selectOption(letter, multiSelect) {
+            if (answered[currentIndex]?.checked && mode === 'practice') return;
+
+            if (multiSelect) {
+                // Toggle selection for multi-select
+                const index = selectedOptions.indexOf(letter);
+                if (index > -1) {
+                    selectedOptions.splice(index, 1);
+                } else {
+                    selectedOptions.push(letter);
+                }
+            } else {
+                // Single select
+                selectedOptions = [letter];
+            }
+
+            // Update UI
+            document.querySelectorAll('.option').forEach(opt => {
+                const optLetter = opt.getAttribute('data-letter');
+                opt.classList.toggle('selected', selectedOptions.includes(optLetter));
+            });
+
+            answered[currentIndex] = {
+                selected: multiSelect ? [...selectedOptions] : selectedOptions[0],
+                checked: false
+            };
+
+            if (mode === 'exam') {
+                const q = questions[currentIndex];
+                const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
+                const isCorrect = multiSelect
+                    ? selectedOptions.length === correctAnswers.length &&
+                      selectedOptions.every(s => correctAnswers.includes(s))
+                    : selectedOptions[0] === correctAnswers[0];
+                answered[currentIndex].isCorrect = isCorrect;
+            }
+        }
+
+        function checkAnswer() {
+            if (selectedOptions.length === 0 || answered[currentIndex]?.checked) return;
+
+            const q = questions[currentIndex];
+            const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
+            const multiSelect = isMultiSelect(q);
+
+            const isCorrect = multiSelect
+                ? selectedOptions.length === correctAnswers.length &&
+                  selectedOptions.every(s => correctAnswers.includes(s))
+                : selectedOptions[0] === correctAnswers[0];
+
+            answered[currentIndex] = {
+                selected: multiSelect ? [...selectedOptions] : selectedOptions[0],
+                checked: true,
+                isCorrect: isCorrect
+            };
+
+            document.querySelectorAll('.option').forEach(opt => {
+                const letter = opt.getAttribute('data-letter');
+                const isSelected = selectedOptions.includes(letter);
+                const isCorrectOption = correctAnswers.includes(letter);
+
+                if (isSelected) {
+                    opt.classList.add(isCorrectOption ? 'correct' : 'incorrect');
+                }
+                if (!isCorrect && isCorrectOption && !isSelected) {
+                    opt.classList.add('show-correct');
+                }
+            });
+
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.className = 'result-message ' + (isCorrect ? 'correct' : 'incorrect');
+            resultMsg.textContent = isCorrect ?
+                'Correct!' :
+                `Incorrect. The correct answer${correctAnswers.length > 1 ? 's are' : ' is'}: ${correctAnswers.join(', ')}`;
+
+            document.getElementById('check-btn').disabled = true;
+
+            updateStats();
+            renderQuestionGrid();
+        }
+
+        function nextQuestion() {
+            if (currentIndex < questions.length - 1) {
+                currentIndex++;
+                renderQuestion();
+            } else if (mode === 'exam') {
+                showFinalResults();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderQuestion();
+            }
+        }
+
+        function jumpToQuestion() {
+            const input = document.getElementById('jump-input');
+            const num = parseInt(input.value);
+            if (num >= 1 && num <= questions.length) {
+                currentIndex = num - 1;
+                renderQuestion();
+            }
+            input.value = '';
+        }
+
+        function handleJump(event) {
+            if (event.key === 'Enter') {
+                jumpToQuestion();
+            }
+        }
+
+        function updateProgress() {
+            const progress = ((currentIndex + 1) / questions.length) * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+        }
+
+        function updateStats() {
+            let correct = 0;
+            let incorrect = 0;
+
+            Object.values(answered).forEach(ans => {
+                if (ans.checked || mode === 'exam') {
+                    if (ans.isCorrect) correct++;
+                    else if (ans.selected && (Array.isArray(ans.selected) ? ans.selected.length > 0 : true)) incorrect++;
+                }
+            });
+
+            document.getElementById('correct-count').textContent = correct;
+            document.getElementById('incorrect-count').textContent = incorrect;
+
+            const total = correct + incorrect;
+            const percent = total > 0 ? Math.round((correct / total) * 100) : 0;
+            document.getElementById('score-percent').textContent = percent + '%';
+        }
+
+        function renderQuestionGrid() {
+            const grid = document.getElementById('question-grid');
+            grid.innerHTML = '';
+
+            questions.forEach((q, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'q-btn';
+                btn.textContent = index + 1;
+                btn.onclick = () => {
+                    currentIndex = index;
+                    renderQuestion();
+                };
+
+                if (answered[index]) {
+                    if (answered[index].checked || mode === 'exam') {
+                        btn.classList.add(answered[index].isCorrect ? 'answered-correct' : 'answered-incorrect');
+                    } else {
+                        btn.classList.add('unanswered');
+                    }
+                } else {
+                    btn.classList.add('unanswered');
+                }
+
+                if (index === currentIndex) {
+                    btn.classList.add('current');
+                }
+
+                grid.appendChild(btn);
+            });
+        }
+
+        function highlightCurrentInGrid() {
+            document.querySelectorAll('.q-btn').forEach((btn, index) => {
+                btn.classList.toggle('current', index === currentIndex);
+            });
+        }
+
+        function showFinalResults() {
+            document.getElementById('quiz-container').style.display = 'none';
+            document.getElementById('final-results').style.display = 'block';
+
+            let correct = 0;
+            let total = 0;
+
+            Object.values(answered).forEach(ans => {
+                if (ans.selected && (Array.isArray(ans.selected) ? ans.selected.length > 0 : true)) {
+                    total++;
+                    if (ans.isCorrect) correct++;
+                }
+            });
+
+            const percent = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+            document.getElementById('final-score').textContent = percent + '%';
+            document.getElementById('final-stats').textContent =
+                `You got ${correct} out of ${total} questions correct.`;
+
+            document.getElementById('score-circle').style.setProperty('--percentage', percent + '%');
+        }
+
+        function restartQuiz() {
+            currentIndex = 0;
+            questionSets[currentTab].answered = {};
+            answered = questionSets[currentTab].answered;
+            selectedOptions = [];
+
+            document.getElementById('quiz-container').style.display = 'block';
+            document.getElementById('final-results').style.display = 'none';
+
+            updateStats();
+            renderQuestion();
+            renderQuestionGrid();
+        }
+
+        function reviewMistakes() {
+            document.getElementById('quiz-container').style.display = 'block';
+            document.getElementById('final-results').style.display = 'none';
+
+            for (let i = 0; i < questions.length; i++) {
+                if (answered[i] && !answered[i].isCorrect) {
+                    currentIndex = i;
+                    renderQuestion();
+                    return;
+                }
+            }
+
+            currentIndex = 0;
+            renderQuestion();
+        }
+
+        // Initialize
+        loadQuestions();
+    </script>
+</body>
+</html>
