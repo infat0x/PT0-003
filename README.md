@@ -15,7 +15,7 @@ Interactive practice exam for CompTIA PenTest+ (PT0-003) certification.
 
 ## Live 
 
-[Start here]([https://YOUR_USERNAME.github.io/pentest-quiz/](https://infat0x.github.io/PT0-003/))
+[[Start here]](https://infat0x.github.io/PT0-003/)
 
 ## Quick Start
 
