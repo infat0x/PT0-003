@@ -175,6 +175,24 @@
             background: var(--bg-surface-hover);
         }
 
+        /* Countdown Timer in Header */
+        .exam-timer-pill {
+            display: none;
+            align-items: center;
+            gap: 6px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #f87171;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 3px 10px;
+            letter-spacing: 0.05em;
+        }
+        .exam-timer-pill.active {
+            display: inline-flex;
+        }
+
         /* Split Workspace: Left (Question/Options) | Right (Navigator/Stats) */
         .split-workspace {
             flex: 1;
@@ -202,6 +220,32 @@
             max-width: 900px;
             margin: 0 auto;
             width: 100%;
+        }
+
+        /* Exam Mode Banner */
+        .exam-banner-alert {
+            display: none;
+            background: var(--bg-surface-elevated);
+            border: 1px solid var(--border-default);
+            padding: 10px 14px;
+            margin-bottom: 16px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-muted);
+            justify-content: space-between;
+            align-items: center;
+        }
+        .exam-banner-alert.active {
+            display: flex;
+        }
+        .exam-banner-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .exam-banner-info span {
+            color: var(--text-heading);
+            font-weight: 600;
         }
 
         /* Omarchy Meta Tag Bar */
@@ -417,6 +461,21 @@
             border-color: #e4e4e7;
         }
 
+        .dock-btn-finish {
+            background: #f43f5e;
+            color: #ffffff;
+            border-color: #f43f5e;
+            font-weight: 700;
+            display: none;
+        }
+        .dock-btn-finish.active {
+            display: inline-block;
+        }
+        .dock-btn-finish:hover:not(:disabled) {
+            background: #e11d48;
+            border-color: #e11d48;
+        }
+
         .dock-btn:disabled {
             opacity: 0.3;
             cursor: not-allowed;
@@ -522,6 +581,12 @@
             outline: 1px solid #ffffff;
         }
 
+        .grid-cell.attempted {
+            border-color: #52525b;
+            color: #ffffff;
+            background: var(--bg-surface-elevated);
+        }
+
         .grid-cell.correct {
             background: var(--accent-green-bg);
             border-color: var(--accent-green-border);
@@ -574,18 +639,46 @@
         .results-box {
             background: var(--bg-panel);
             border: 1px solid var(--border-default);
-            max-width: 480px;
+            max-width: 520px;
             width: 100%;
-            padding: 32px;
+            padding: 36px 32px;
             text-align: center;
         }
 
-        .results-score {
+        .results-verdict {
+            display: inline-block;
             font-family: var(--font-mono);
-            font-size: 48px;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .results-verdict.pass {
+            background: var(--accent-green-bg);
+            border: 1px solid var(--accent-green-border);
+            color: var(--accent-green);
+        }
+        .results-verdict.fail {
+            background: var(--accent-red-bg);
+            border: 1px solid var(--accent-red-border);
+            color: var(--accent-red);
+        }
+
+        .results-score-scale {
+            font-family: var(--font-mono);
+            font-size: 52px;
             font-weight: 700;
             color: #fff;
-            margin-bottom: 8px;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .results-score-scale span {
+            font-size: 20px;
+            color: var(--text-muted);
+            font-weight: 400;
         }
 
         /* Custom Minimal Scrollbar */
@@ -619,7 +712,12 @@
         <header class="top-navbar">
             <div class="nav-brand">
                 <span class="brand-pill">PT0-003</span>
-                <span class="brand-title">CompTIA PenTest+ <span class="brand-sub">/ Studio Workspace</span></span>
+                <span class="brand-title">CompTIA PenTest+ <span class="brand-sub">/ Exam Studio</span></span>
+            </div>
+
+            <!-- Countdown Pill in Exam Mode -->
+            <div class="exam-timer-pill" id="exam-timer-badge">
+                <span>⏱</span> <span id="timer-display">02:45:00</span>
             </div>
 
             <div class="nav-controls">
@@ -634,7 +732,7 @@
 
                 <div class="segmented-group">
                     <button class="btn-segment active" id="mode-practice" onclick="setMode('practice')">Practice</button>
-                    <button class="btn-segment" id="mode-exam" onclick="setMode('exam')">Exam</button>
+                    <button class="btn-segment" id="mode-exam" onclick="setMode('exam')">Exam Mode</button>
                 </div>
 
                 <button class="btn-square" onclick="shuffleQuestions()">Shuffle</button>
@@ -646,6 +744,16 @@
             <!-- Left Panel: Active Question Stage -->
             <main class="workspace-main">
                 <div class="question-stage">
+                    <!-- Exam Mode Status Bar -->
+                    <div class="exam-banner-alert" id="exam-banner">
+                        <div class="exam-banner-info">
+                            <div>EXAM: <span>PT0-003</span></div>
+                            <div>ITEMS: <span>90 MAX</span></div>
+                            <div>PASS MARK: <span>750 / 900</span></div>
+                        </div>
+                        <div style="color: var(--accent-amber); font-weight: 600;">SIMULATION RUNNING</div>
+                    </div>
+
                     <div class="question-header-row">
                         <div class="q-badge-wrap">
                             <span class="q-badge" id="question-number">Q 1</span>
@@ -670,14 +778,15 @@
 
                     <div style="display: flex; gap: 8px;">
                         <button class="dock-btn dock-btn-primary" id="check-btn" onclick="checkAnswer()">Verify Answer</button>
+                        <button class="dock-btn dock-btn-finish" id="finish-exam-btn" onclick="finishExamPrompt()">Submit Exam</button>
                     </div>
                 </footer>
             </main>
 
-            <!-- Right Panel: Matrix Navigator & Realtime Stats (No-Scroll Viewport) -->
+            <!-- Right Panel: Matrix Navigator & Realtime Stats -->
             <aside class="workspace-sidebar">
                 <div class="sidebar-header">
-                    <span class="sidebar-title">Session Progress</span>
+                    <span class="sidebar-title" id="sidebar-status-title">Session Progress</span>
                     <span class="brand-pill" id="score-percent">0%</span>
                 </div>
 
@@ -691,11 +800,11 @@
                         <span class="metric-num"><span id="answered-count">0</span></span>
                     </div>
                     <div class="metric-cell">
-                        <span class="metric-lbl">Correct</span>
+                        <span class="metric-lbl" id="metric-3-label">Correct</span>
                         <span class="metric-num pass" id="correct-count">0</span>
                     </div>
                     <div class="metric-cell">
-                        <span class="metric-lbl">Incorrect</span>
+                        <span class="metric-lbl" id="metric-4-label">Incorrect</span>
                         <span class="metric-num fail" id="incorrect-count">0</span>
                     </div>
                 </div>
@@ -715,12 +824,13 @@
         <!-- Fullscreen Result Splash (Exam Complete) -->
         <div class="results-overlay" id="final-results">
             <div class="results-box">
-                <span class="brand-pill" style="margin-bottom: 16px; display: inline-block;">SESSION COMPLETE</span>
-                <div class="results-score" id="final-score">0%</div>
-                <p id="final-stats" style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin-bottom: 24px;"></p>
+                <div class="results-verdict" id="results-verdict">PASS</div>
+                <div class="results-score-scale" id="comp-scaled-score">780 <span>/ 900</span></div>
+                <div style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin-bottom: 12px;" id="passing-info">Passing Score: 750 / 900</div>
+                <p id="final-stats" style="font-family: var(--font-mono); font-size: 12px; color: var(--text-body); margin-bottom: 24px;"></p>
                 <div style="display: flex; gap: 8px; justify-content: center;">
-                    <button class="dock-btn dock-btn-primary" onclick="restartQuiz()">Restart Bank</button>
-                    <button class="dock-btn" onclick="reviewMistakes()">Review Errors</button>
+                    <button class="dock-btn dock-btn-primary" onclick="restartQuiz()">New Attempt</button>
+                    <button class="dock-btn" onclick="reviewMistakes()">Review All Answers</button>
                 </div>
             </div>
         </div>
@@ -733,11 +843,19 @@
         };
 
         let currentTab = 'premium';
+        let rawQuestions = [];
         let questions = [];
         let currentIndex = 0;
         let selectedOptions = [];
         let answered = {};
         let mode = 'practice';
+
+        // CompTIA PT0-003 Official Exam Standards
+        const EXAM_DURATION_SECONDS = 165 * 60; // 165 minutes = 9900 seconds
+        const EXAM_MAX_QUESTIONS = 90;
+        const PASSING_SCORE = 750; // out of 900
+        let timerInterval = null;
+        let timeRemaining = EXAM_DURATION_SECONDS;
 
         async function loadQuestions() {
             try {
@@ -765,8 +883,22 @@
             document.getElementById('tab-premium').classList.toggle('active', tabName === 'premium');
             document.getElementById('tab-marks4sure').classList.toggle('active', tabName === 'marks4sure');
 
-            questions = questionSets[tabName].questions;
-            answered = questionSets[tabName].answered;
+            rawQuestions = [...questionSets[tabName].questions];
+            prepareQuestionsForMode();
+        }
+
+        function prepareQuestionsForMode() {
+            if (mode === 'exam') {
+                // Shuffle and pick maximum 90 questions for authentic CompTIA Exam
+                const shuffled = [...rawQuestions].sort(() => 0.5 - Math.random());
+                questions = shuffled.slice(0, Math.min(EXAM_MAX_QUESTIONS, shuffled.length));
+                startExamTimer();
+            } else {
+                questions = [...rawQuestions];
+                stopExamTimer();
+            }
+
+            answered = {};
             currentIndex = 0;
             selectedOptions = [];
 
@@ -785,8 +917,51 @@
             document.getElementById('mode-practice').classList.toggle('active', newMode === 'practice');
             document.getElementById('mode-exam').classList.toggle('active', newMode === 'exam');
 
-            document.getElementById('check-btn').style.display = mode === 'exam' ? 'none' : 'inline-block';
-            renderQuestion();
+            const isExam = mode === 'exam';
+            document.getElementById('check-btn').style.display = isExam ? 'none' : 'inline-block';
+            document.getElementById('finish-exam-btn').classList.toggle('active', isExam);
+            document.getElementById('exam-banner').classList.toggle('active', isExam);
+            document.getElementById('exam-timer-badge').classList.toggle('active', isExam);
+
+            // In exam mode, hide live correct/incorrect stats to simulate real test
+            document.getElementById('metric-3-label').textContent = isExam ? 'Remaining' : 'Correct';
+            document.getElementById('metric-4-label').textContent = isExam ? 'Mark' : 'Incorrect';
+
+            prepareQuestionsForMode();
+        }
+
+        function startExamTimer() {
+            stopExamTimer();
+            timeRemaining = EXAM_DURATION_SECONDS;
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+
+                if (timeRemaining <= 0) {
+                    stopExamTimer();
+                    alert("CompTIA PenTest+ Exam duration (165 minutes) has expired! Submitting answers automatically.");
+                    showFinalResults();
+                }
+            }, 1000);
+        }
+
+        function stopExamTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
+
+        function updateTimerDisplay() {
+            const hours = Math.floor(timeRemaining / 3600);
+            const minutes = Math.floor((timeRemaining % 3600) / 60);
+            const seconds = timeRemaining % 60;
+
+            const formatted = 
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            document.getElementById('timer-display').textContent = formatted;
         }
 
         function shuffleQuestions() {
@@ -795,8 +970,7 @@
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
             currentIndex = 0;
-            questionSets[currentTab].answered = {};
-            answered = questionSets[currentTab].answered;
+            answered = {};
             updateStats();
             renderQuestion();
             renderQuestionGrid();
@@ -853,12 +1027,12 @@
 
                         if (isSelected) {
                             opt.classList.add('selected');
-                            if (ans.checked) {
+                            if (ans.checked && mode === 'practice') {
                                 const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
                                 opt.classList.add(correctAnswers.includes(letter) ? 'correct' : 'incorrect');
                             }
                         }
-                        if (ans.checked) {
+                        if (ans.checked && mode === 'practice') {
                             const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
                             if (correctAnswers.includes(letter) && !ans.isCorrect) {
                                 opt.classList.add('show-correct');
@@ -879,7 +1053,7 @@
             }
 
             const resultMsg = document.getElementById('result-message');
-            if (answered[currentIndex]?.checked) {
+            if (answered[currentIndex]?.checked && mode === 'practice') {
                 const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
                 resultMsg.className = 'feedback-strip ' + (answered[currentIndex].isCorrect ? 'correct' : 'incorrect');
                 resultMsg.textContent = answered[currentIndex].isCorrect ?
@@ -889,7 +1063,7 @@
                 resultMsg.className = 'feedback-strip';
             }
 
-            document.getElementById('check-btn').disabled = answered[currentIndex]?.checked || false;
+            document.getElementById('check-btn').disabled = (answered[currentIndex]?.checked && mode === 'practice') || false;
 
             highlightCurrentInGrid();
         }
@@ -913,20 +1087,18 @@
                 opt.classList.toggle('selected', selectedOptions.includes(optLetter));
             });
 
+            const q = questions[currentIndex];
+            const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
+            const isCorrect = multiSelect
+                ? selectedOptions.length === correctAnswers.length &&
+                  selectedOptions.every(s => correctAnswers.includes(s))
+                : selectedOptions[0] === correctAnswers[0];
+
             answered[currentIndex] = {
                 selected: multiSelect ? [...selectedOptions] : selectedOptions[0],
-                checked: false
+                checked: mode === 'exam', // in exam mode, it marks as completed without showing results
+                isCorrect: isCorrect
             };
-
-            if (mode === 'exam') {
-                const q = questions[currentIndex];
-                const correctAnswers = Array.isArray(q.correct) ? q.correct : [q.correct];
-                const isCorrect = multiSelect
-                    ? selectedOptions.length === correctAnswers.length &&
-                      selectedOptions.every(s => correctAnswers.includes(s))
-                    : selectedOptions[0] === correctAnswers[0];
-                answered[currentIndex].isCorrect = isCorrect;
-            }
 
             updateStats();
             renderQuestionGrid();
@@ -980,7 +1152,7 @@
                 currentIndex++;
                 renderQuestion();
             } else if (mode === 'exam') {
-                showFinalResults();
+                finishExamPrompt();
             }
         }
 
@@ -988,6 +1160,23 @@
             if (currentIndex > 0) {
                 currentIndex--;
                 renderQuestion();
+            }
+        }
+
+        function finishExamPrompt() {
+            let answeredTotal = 0;
+            Object.values(answered).forEach(ans => {
+                if (ans.selected && (Array.isArray(ans.selected) ? ans.selected.length > 0 : true)) answeredTotal++;
+            });
+
+            const unanswered = questions.length - answeredTotal;
+            const confirmMsg = unanswered > 0
+                ? `You still have ${unanswered} unanswered question(s). Are you sure you want to finalize and grade your CompTIA PenTest+ exam now?`
+                : `Are you sure you want to submit your CompTIA PenTest+ exam?`;
+
+            if (confirm(confirmMsg)) {
+                stopExamTimer();
+                showFinalResults();
             }
         }
 
@@ -1016,19 +1205,24 @@
                 if (ans.selected && (Array.isArray(ans.selected) ? ans.selected.length > 0 : true)) {
                     answeredTotal++;
                 }
-                if (ans.checked || mode === 'exam') {
-                    if (ans.isCorrect) correct++;
-                    else if (ans.selected && (Array.isArray(ans.selected) ? ans.selected.length > 0 : true)) incorrect++;
-                }
+                if (ans.isCorrect) correct++;
+                else if (ans.selected) incorrect++;
             });
 
-            document.getElementById('correct-count').textContent = correct;
-            document.getElementById('incorrect-count').textContent = incorrect;
             document.getElementById('answered-count').textContent = answeredTotal;
 
-            const total = correct + incorrect;
-            const percent = total > 0 ? Math.round((correct / total) * 100) : 0;
-            document.getElementById('score-percent').textContent = percent + '%';
+            if (mode === 'exam') {
+                document.getElementById('correct-count').textContent = questions.length - answeredTotal;
+                document.getElementById('incorrect-count').textContent = 'PT0-003';
+                const progressPct = Math.round((answeredTotal / questions.length) * 100);
+                document.getElementById('score-percent').textContent = progressPct + '%';
+            } else {
+                document.getElementById('correct-count').textContent = correct;
+                document.getElementById('incorrect-count').textContent = incorrect;
+                const totalAttempted = correct + incorrect;
+                const percent = totalAttempted > 0 ? Math.round((correct / totalAttempted) * 100) : 0;
+                document.getElementById('score-percent').textContent = percent + '%';
+            }
         }
 
         function renderQuestionGrid() {
@@ -1045,10 +1239,15 @@
                 };
 
                 if (answered[index]) {
-                    if (answered[index].checked || mode === 'exam') {
-                        cell.classList.add(answered[index].isCorrect ? 'correct' : 'incorrect');
-                    } else if (answered[index].selected) {
-                        cell.style.borderColor = '#52525b';
+                    if (mode === 'practice') {
+                        if (answered[index].checked) {
+                            cell.classList.add(answered[index].isCorrect ? 'correct' : 'incorrect');
+                        }
+                    } else {
+                        // In exam mode, just show that it was attempted without revealing right/wrong
+                        if (answered[index].selected) {
+                            cell.classList.add('attempted');
+                        }
                     }
                 }
 
@@ -1070,48 +1269,52 @@
             document.getElementById('final-results').style.display = 'flex';
 
             let correct = 0;
-            let total = 0;
+            let total = questions.length;
 
             Object.values(answered).forEach(ans => {
-                if (ans.selected && (Array.isArray(ans.selected) ? ans.selected.length > 0 : true)) {
-                    total++;
-                    if (ans.isCorrect) correct++;
-                }
+                if (ans.isCorrect) correct++;
             });
 
-            const percent = total > 0 ? Math.round((correct / total) * 100) : 0;
+            // CompTIA PenTest+ scale: 100 to 900 scale
+            // Score = 100 + (correct / total) * 800
+            const scaledScore = Math.round(100 + (correct / total) * 800);
+            const isPassed = scaledScore >= PASSING_SCORE;
 
-            document.getElementById('final-score').textContent = percent + '%';
+            const verdictEl = document.getElementById('results-verdict');
+            verdictEl.textContent = isPassed ? 'PASSED / CERTIFIED' : 'FAILED / DID NOT PASS';
+            verdictEl.className = 'results-verdict ' + (isPassed ? 'pass' : 'fail');
+
+            document.getElementById('comp-scaled-score').innerHTML = `${scaledScore} <span>/ 900</span>`;
+            
+            const rawPercent = Math.round((correct / total) * 100);
             document.getElementById('final-stats').textContent =
-                `Finalized ${correct} correct answers out of ${total} attempted (${questions.length} total in bank).`;
+                `Raw Score: ${correct}/${total} correct (${rawPercent}%). You needed at least 750/900 to pass CompTIA PT0-003.`;
         }
 
         function restartQuiz() {
-            currentIndex = 0;
-            questionSets[currentTab].answered = {};
-            answered = questionSets[currentTab].answered;
-            selectedOptions = [];
-
-            document.getElementById('final-results').style.display = 'none';
-
-            updateStats();
-            renderQuestion();
-            renderQuestionGrid();
+            prepareQuestionsForMode();
         }
 
         function reviewMistakes() {
             document.getElementById('final-results').style.display = 'none';
+            // Enable practice mode inspection so user can review every answer
+            mode = 'practice';
+            document.getElementById('mode-practice').classList.add('active');
+            document.getElementById('mode-exam').classList.remove('active');
+            document.getElementById('exam-banner').classList.remove('active');
+            document.getElementById('exam-timer-badge').classList.remove('active');
+            document.getElementById('check-btn').style.display = 'inline-block';
+            document.getElementById('finish-exam-btn').classList.remove('active');
 
-            for (let i = 0; i < questions.length; i++) {
-                if (answered[i] && !answered[i].isCorrect) {
-                    currentIndex = i;
-                    renderQuestion();
-                    return;
-                }
-            }
+            // Force reveal right/wrong in answers
+            Object.keys(answered).forEach(k => {
+                answered[k].checked = true;
+            });
 
+            updateStats();
             currentIndex = 0;
             renderQuestion();
+            renderQuestionGrid();
         }
 
         loadQuestions();
