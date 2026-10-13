@@ -210,6 +210,27 @@
             flex-direction: column;
             border-right: 1px solid var(--border-default);
             background: var(--bg-canvas);
+            position: relative;
+        }
+
+        /* Floating PenTest+ Badge in bottom-left corner above footer */
+        .stage-watermark-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 28px;
+            z-index: 5;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+        }
+        .stage-watermark-badge img {
+            width: 90px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.8));
         }
 
         .question-stage {
@@ -420,27 +441,29 @@
 
         /* Bottom Command Dock */
         .workspace-dock {
-            height: 52px;
+            height: 64px;
             background: var(--bg-panel);
             border-top: 1px solid var(--border-default);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 24px;
+            padding: 0 28px;
             flex-shrink: 0;
+            z-index: 10;
         }
 
         .dock-btn {
             font-family: var(--font-mono);
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 600;
-            padding: 7px 16px;
+            padding: 9px 20px;
             cursor: pointer;
             transition: all 0.12s ease;
             text-transform: uppercase;
             border: 1px solid var(--border-default);
             background: var(--bg-surface);
             color: var(--text-body);
+            letter-spacing: 0.03em;
         }
 
         .dock-btn:hover:not(:disabled) {
@@ -454,6 +477,7 @@
             color: #000000;
             border-color: #ffffff;
             font-weight: 700;
+            padding: 9px 24px;
         }
 
         .dock-btn-primary:hover:not(:disabled) {
@@ -770,17 +794,19 @@
                     <div class="feedback-strip" id="result-message"></div>
                 </div>
 
+                <!-- Floating PenTest+ Badge in requested location (red circle area) -->
+                <div class="stage-watermark-badge">
+                    <img src="pentest-logo.png" alt="CompTIA PenTest+" title="CompTIA PenTest+ Certified">
+                </div>
+
                 <!-- Bottom Sticky Control Bar -->
                 <footer class="workspace-dock">
-                    <div style="display: flex; gap: 12px; align-items: center;">
-                        <img src="pentest-logo.png" alt="CompTIA PenTest+" style="height: 32px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));" title="CompTIA PenTest+ Certified">
-                        <div style="display: flex; gap: 8px;">
-                            <button class="dock-btn" id="prev-btn" onclick="prevQuestion()">Previous</button>
-                            <button class="dock-btn" id="next-btn" onclick="nextQuestion()">Next</button>
-                        </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <button class="dock-btn" id="prev-btn" onclick="prevQuestion()">Previous</button>
+                        <button class="dock-btn" id="next-btn" onclick="nextQuestion()">Next</button>
                     </div>
 
-                    <div style="display: flex; gap: 8px;">
+                    <div style="display: flex; gap: 10px;">
                         <button class="dock-btn dock-btn-primary" id="check-btn" onclick="checkAnswer()">Verify Answer</button>
                         <button class="dock-btn dock-btn-finish" id="finish-exam-btn" onclick="finishExamPrompt()">Submit Exam</button>
                     </div>
