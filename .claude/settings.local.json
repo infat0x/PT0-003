@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python extract_pdf.py:*)",
+      "Bash(python parse_questions.py:*)",
+      "Bash(python extract_pdf2.py:*)",
+      "Bash(python parse_questions2.py:*)"
+    ]
+  }
+}
